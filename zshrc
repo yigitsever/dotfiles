@@ -126,8 +126,8 @@ export GPG_TTY=$(tty)
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 export GEM_HOME=$HOME/.gem
 
-export NVM_DIR="/home/yigit/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/home/yigit/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Getting Things Done & Taskwarrior Related
 alias in='task add +in' # Alias for tasks with in tag (in tray)
