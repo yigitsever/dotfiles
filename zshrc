@@ -1,5 +1,5 @@
-# If you come from bash you might have to change your $PATH.
 cowsay $(fortune)
+# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:/home/yigit/.local/bin"
 
@@ -53,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cpanm perl taskwarrior)
+plugins=(git cpanm perl taskwarrior colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,7 +87,7 @@ fi
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-alias ll='ls -alF'
+alias ll='ls -alhF --color=yes'
 alias la='ls -A'
 alias l='ls -CF'
 alias vim='nvim'        # ugh.
@@ -100,10 +100,10 @@ alias cp='cp -i'
 alias mv='mv -i'        # Interactive, don't fuck shit up
 alias free='free -m'
 alias df='df -h'
-alias ll='ls -lha --color=yes'
 alias mirrors='sudo pacman-mirrors -f 0 && sudo pacman -Syy'
 alias -g C='| xclip -selection clipboard' # Copy to clipboard
 alias silence='gksudo rmmod pcspkr'
+alias bc='bc -l'
 alias matlab='/usr/local/MATLAB/R2017a/bin/matlab'
 alias maas="expr $(cal | awk 'FNR>2{d+=NF}END{print d}') - $(date +%d)"
 alias gg="exit"
@@ -121,14 +121,13 @@ PERL_MB_OPT="--install_base \"/home/yigit/perl5\""; export PERL_M_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/yigit/perl5"; export PERL_MM_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/yigit/perl5"; export PERL_MM_OPT;
 
+export GPG_TTY=$(tty)
 
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 export GEM_HOME=$HOME/.gem
 
-
 export NVM_DIR="/home/yigit/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 # Getting Things Done & Taskwarrior Related
 alias in='task add +in' # Alias for tasks with in tag (in tray)
