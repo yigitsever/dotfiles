@@ -12,9 +12,7 @@
     ~/.ledgerrc: ledgerrc
     ~/.taskrc: taskrc
     ~/.zshrc: zshrc
-    ~/.vim: vim
     ~/.config/nvim/init.vim: vimrc
-    ~/.config/i3/config: i3config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
