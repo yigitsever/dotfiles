@@ -14,7 +14,7 @@
     ~/.zshrc: zshrc
     ~/.config/nvim/init.vim: vimrc
     ~/.local/share/xfce4/terminal/colorschemes: colorschemes
-    ~/.config/xfce4/terminal: terminalrc
+    ~/.config/xfce4/terminal/terminalrc: terminalrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
