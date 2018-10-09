@@ -257,16 +257,18 @@ let g:tagbar_width = 25
 "}}}
 
 "{{{ Airline Configuration
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 
 let g:airline_skip_empty_sections = 1
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
 let g:airline_symbols.space = "\ua0"
 
 "}}}
@@ -289,6 +291,7 @@ let g:syntastic_mode_map = {
     \ 'active_filetypes': [],
     \ 'passive_filetypes': []
 \}
+
 nnoremap <Leader>s :SyntasticCheck<CR>
 nnoremap <Leader>r :SyntasticReset<CR>
 nnoremap <Leader>i :SyntasticInfo<CR>
