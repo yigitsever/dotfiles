@@ -1,2 +1,4 @@
 # dotfiles
-My dotfiles for (n)vim, tmux, taskwarrior and xfce4 terminal
+my dotfiles for (n)vim, tmux, taskwarrior and xfce4 terminal
+
+uses [Dotbot][dotbot] for installation.
