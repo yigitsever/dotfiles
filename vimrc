@@ -125,7 +125,6 @@ set nohidden " when i close a tab, remove the buffer
 set title " set terminal title
 set showmatch " jump to the matching bracket briefly, REMOVE AFTER TESTING
 set linebreak " wrap using 'breakat' character
-set autochdir " what the function above does, REMOVE AFTER TESTING
 set splitbelow " new split panes will split to below and right
 set splitright
 
@@ -261,21 +260,18 @@ let g:tagbar_width = 25
 "}}}
 
 "{{{ Airline Configuration
-let g:airline_powerline_fonts = 1 " fira mono with powerline
+let g:airline_powerline_fonts = 1 " fira code
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 
-let g:airline_skip_empty_sections = 1
-
-"let g:airline_symbols.space = "\ua0"
+"let g:airline_skip_empty_sections = 1
 
 "}}}
 
 "{{{ NERDTree Configuration
 let g:NERDTreeWinSize=25
-
 "}}}
 
 "{{{ Syntastic Configuration
