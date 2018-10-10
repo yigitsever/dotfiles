@@ -111,7 +111,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 set encoding=utf-8
-set scrolloff=2 " Keep n lines above/below cursor
+set scrolloff=4 " Keep n lines above/below cursor
 set mouse=c " enable mouse support in console
 set backspace=2 " make backspace work like most other programs
 set number " line numbers
@@ -223,7 +223,7 @@ nnoremap <silent> j gj
 inoremap <silent> <Up> <Esc>gka
 inoremap <silent> <Down> <Esc>gja
 
-" quicker window (pane?) movement
+" quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -232,6 +232,9 @@ nnoremap <C-l> <C-w>l
 " Create Blank Newlines and stay in Normal mode
 nnoremap <silent> zj o<Esc>
 nnoremap <silent> zk O<Esc>
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
 
 " Space will toggle folds!
 nnoremap <space> za
