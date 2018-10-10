@@ -25,8 +25,8 @@ MiscDefaultWorkingDir=
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscCopyOnSelect=FALSE
-MiscSlimTabs=FALSE
-FontName=Input 12
+MiscSlimTabs=TRUE
+FontName=Fira Mono for Powerline Medium 11
 TitleMode=TERMINAL_TITLE_REPLACE
 MiscNewTabAdjacent=FALSE
 MiscShowRelaunchDialog=TRUE
@@ -34,4 +34,5 @@ ColorForeground=#d5c4a1
 ColorBackground=#32302f
 ColorPalette=#32302f;#fb4934;#b8bb26;#fabd2f;#83a598;#d3869b;#8ec07c;#d5c4a1;#665c54;#fb4934;#b8bb26;#fabd2f;#83a598;#d3869b;#8ec07c;#fbf1c7
 ColorCursor=x
+TabActivityTimeout=1
 
