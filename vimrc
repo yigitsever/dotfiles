@@ -25,6 +25,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'dbeniamine/cheat.sh-vim'
+Plugin 'ap/vim-css-color'
 
 Plugin 'ledger/vim-ledger'
 Plugin 'neovimhaskell/haskell-vim'
