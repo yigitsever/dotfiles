@@ -16,8 +16,8 @@ data.location=/home/yigit/Dropbox/.task
 # Color theme (uncomment one to use)
 #include /usr/share/doc/task/rc/light-16.theme
 #include /usr/share/doc/task/rc/light-256.theme
-#include /usr/share/doc/task/rc/dark-16.theme
-include /usr/share/doc/task/rc/dark-256.theme
+include /usr/share/doc/task/rc/dark-16.theme
+#include /usr/share/doc/task/rc/dark-256.theme
 #include /usr/share/doc/task/rc/dark-red-256.theme
 #include /usr/share/doc/task/rc/dark-green-256.theme
 #include /usr/share/doc/task/rc/dark-blue-256.theme
@@ -31,44 +31,44 @@ include /usr/share/doc/task/rc/dark-256.theme
 
 ###### GTD Configuration ######
 ### 'in' Report Definition
-report.in.columns           = id,description
-report.in.description       = Inbox
-report.in.filter            = status:pending limit:page (+in)
-report.in.labels            = ID,Description
+report.in.columns     = id,description
+report.in.description = Inbox
+report.in.filter      = status:pending limit:page (+in)
+report.in.labels      = ID,Description
 
 ### 'inConky' Report Definition
-report.inConky.columns           = description
-report.inConky.description       = Inbox for Conky
-report.inConky.filter            = status:pending limit:page (+in)
-report.inConky.labels            = Description
+report.inConky.columns     = description
+report.inConky.description = Inbox for Conky
+report.inConky.filter      = status:pending limit:page (+in)
+report.inConky.labels      = Description
 #
 ### 'todo' Report Definition
-report.todo.columns           = id,description,due
-report.todo.labels            = ID,Description, Due
-report.todo.description       =	Todo Items for Today
-report.todo.filter            = status:pending +TODAY
-report.todo.dateformat=H:N
+report.todo.columns     = id,description,due
+report.todo.labels      = ID,Description, Due
+report.todo.description = Todo Items for Today
+report.todo.filter      = status:pending +TODAY
+report.todo.dateformat  = H:N
 
-### 'todo' Report Definition
-report.todoConky.columns           = description,due
-report.todoConky.labels            = Description, Due
-report.todoConky.description       =	Todo Items for Today
-report.todoConky.filter            = status:pending +TODAY
-report.todoConky.dateformat=H:N
+### 'todo to Show in Conky' Report Definition
+report.todoConky.columns     = description,due
+report.todoConky.labels      = Description, Due
+report.todoConky.description = Todo Items for Today
+report.todoConky.filter      = status:pending +TODAY
+report.todoConky.dateformat  = H:N
 
 ### contexts
-context.home			=	+@home or +@online
-context.work			=	+@work
+context.home = +@home or +@online
+context.work = +@work
 
 ### user defined attribute brainpower (difficulty of tasks)
-uda.brainpower.type		=	string
-uda.brainpower.label	=	Brainpower
-uda.brainpower.values	=	H,M,L
-uda.brainpower.default	=	M
+uda.brainpower.type    = string
+uda.brainpower.label   = Brainpower
+uda.brainpower.values  = H,M,L
+uda.brainpower.default = M
 
 ### overriding 'next' report
-report.next.description     = Most urgent tasks
-report.next.columns         = id,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,brainpower
-report.next.filter          = status:pending and +next and -TODAY
-report.next.labels          = ID,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Brainpower
-report.next.sort            = brainpower-,priority-,urgency-
+report.next.description = Most urgent tasks
+report.next.columns     = id,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,brainpower
+report.next.filter      = status:pending and +next and -TODAY
+report.next.labels      = ID,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Brainpower
+report.next.sort        = brainpower-,priority-,urgency-

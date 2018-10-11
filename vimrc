@@ -245,10 +245,10 @@ map N Nzz
 map n nzz
 
 "Insert timestamp
-nnoremap <F5> "=strftime("%x %X")<CR>P
-inoremap <F5> <C-R>=strftime("%x %X")<CR>
+nnoremap <F5> "=strftime("%F %T")<CR>P
+inoremap <F5> <C-R>=strftime("%F %T")<CR>
 
-nnoremap <Leader>t "=strftime("%F %T")<CR>P
+nnoremap <Leader>t "=strftime("%F")<CR>P
 
 "}}}
 
