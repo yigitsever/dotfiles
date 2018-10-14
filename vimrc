@@ -38,7 +38,7 @@ call vundle#end()            " required
 "{{{Auto Commands
 
 " Automatically cd into the directory that the file is in
-"autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
+autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
 
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
@@ -113,7 +113,7 @@ set wildmode=list:longest,full
 
 set encoding=utf-8
 set scrolloff=4 " Keep n lines above/below cursor
-set mouse=c " enable mouse support in console
+set mouse=c
 set backspace=2 " make backspace work like most other programs
 set number " line numbers
 set history=1000 " number of lines that are remembered
@@ -138,9 +138,6 @@ nnoremap JJJJ <Nop>
 
 " Since I use linux, I want this
 let g:clipbrdDefaultReg = '+'
-
-" Set off the other paren
-"highlight MatchParen ctermbg=4 " doesn't look like this is needed anymore?
 
 " }}}
 
@@ -278,8 +275,8 @@ let g:NERDTreeWinSize=25
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 4
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 let g:syntastic_mode_map = {
@@ -299,6 +296,7 @@ let g:syntastic_enable_perl_checker = 1
 "}}}
 
 "{{{ Ledger/YouCompleteMe
+
 if exists('g:ycm_filetype_blacklist')
     call extend(g:ycm_filetype_blacklist, { 'ledger': 1 })
 endif
@@ -306,3 +304,4 @@ let g:ledger_extra_options = '--pedantic --explicit --check-payees'
 au FileType ledger noremap { ?^\d<CR>
 au FileType ledger noremap } /^\d<CR>
 "}}}
+
