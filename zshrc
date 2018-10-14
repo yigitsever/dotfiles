@@ -127,6 +127,8 @@ PERL_MB_OPT="--install_base \"/home/yigit/perl5\""; export PERL_M_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/yigit/perl5"; export PERL_MM_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/yigit/perl5"; export PERL_MM_OPT;
 
+RANGER_LOAD_DEFAULT_RC=FALSE; export RANGER_LOAD_DEFAULT_RC
+
 export GPG_TTY=$(tty)
 
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
