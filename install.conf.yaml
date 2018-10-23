@@ -5,22 +5,21 @@
 
 - clean: ['~']
 
-- link                                                         :
-    ~/.dotfiles                                                : ''
-    ~/.tmux.conf                                               : tmux.conf
-    ~/.gitconfig                                               : gitconfig
-    ~/.ledgerrc                                                : ledgerrc
-    ~/.taskrc                                                  : taskrc
-    ~/.zshrc                                                   : zshrc
-    ~/.config/nvim/init.vim                                    : vimrc
-    ~/.local/share/xfce4/terminal/colorschemes                 : colorschemes
-    ~/.config/xfce4/terminal/terminalrc                        : terminalrc
-    ~/.newsboat/config                                         : newsboatrc
-    ~/.newsboat/urls                                           : newsboaturls
-    ~/.ycm_extra_conf.py                                       : ycm_extra_conf
-    ~/.config/kitty/kitty.conf                                 : kitty.conf
-    ~/.config/ranger                                           : ranger
-    ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml : xfce4-panel.xml
+- link                                         :
+    ~/.dotfiles                                : ''
+    ~/.tmux.conf                               : tmux.conf
+    ~/.gitconfig                               : gitconfig
+    ~/.ledgerrc                                : ledgerrc
+    ~/.taskrc                                  : taskrc
+    ~/.zshrc                                   : zshrc
+    ~/.config/nvim/init.vim                    : vimrc
+    ~/.local/share/xfce4/terminal/colorschemes : colorschemes
+    ~/.config/xfce4/terminal/terminalrc        : terminalrc
+    ~/.newsboat/config                         : newsboatrc
+    ~/.newsboat/urls                           : newsboaturls
+    ~/.ycm_extra_conf.py                       : ycm_extra_conf
+    ~/.config/kitty/kitty.conf                 : kitty.conf
+    ~/.config/ranger                           : ranger
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
