@@ -21,6 +21,7 @@
     ~/.config/kitty/kitty.conf                 : kitty.conf
     ~/.config/ranger                           : ranger
     ~/.config/redshift.conf                    : redshift.conf
+    ~/.config/rtv/rtv.cfg                      : rtv.cfg
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
