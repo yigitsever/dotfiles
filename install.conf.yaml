@@ -22,6 +22,7 @@
     ~/.config/ranger                           : ranger
     ~/.config/redshift.conf                    : redshift.conf
     ~/.config/rtv/rtv.cfg                      : rtv.cfg
+    ~/.config/mpv/mpv.conf                     : mpv.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
