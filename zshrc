@@ -118,7 +118,7 @@ mkcdir () {
         cd -P -- "$1"
 }
 
-. /home/yigit/bin/z.sh
+. /home/yigit/bin/z.sh  # z github told me to put this here
 
 PATH="/home/yigit/perl5/bin${PATH+:}${PATH}"; export PATH;
 PERL5LIB="/home/yigit/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
