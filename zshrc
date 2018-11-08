@@ -153,3 +153,5 @@ alias tick=tickle
 alias think='tickle +1d'
 
 alias lim='nvim /home/yigit/Dropbox/ledger.dat'
+alias maybe='task due:someday list'
+
