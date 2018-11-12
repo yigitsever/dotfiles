@@ -155,3 +155,4 @@ alias think='tickle +1d'
 alias lim='nvim /home/yigit/Dropbox/ledger.dat'
 alias maybe='task due:someday list'
 alias music='mpv --no-vid'
+alias s="du -hs * | sort -rh | head -5"
