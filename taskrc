@@ -58,7 +58,7 @@ report.todoConky.dateformat  = H:N
 
 ### contexts
 context.home = +@home or +@online
-context.work = +@work
+context.work = +@work or +@online
 
 ### user defined attribute brainpower (difficulty of tasks)
 uda.brainpower.type    = string
