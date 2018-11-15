@@ -140,6 +140,10 @@ nnoremap JJJJ <Nop>
 " Since I use linux, I want this
 let g:clipbrdDefaultReg = '+'
 
+" https://stackoverflow.com/a/3445040/
+" switch case labels
+set cinoptions=l1
+
 " }}}
 
 "{{{Look and Feel
