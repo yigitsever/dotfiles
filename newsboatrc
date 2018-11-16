@@ -1,5 +1,5 @@
 browser "firefox %u"
-color info red color7 bold
+color info black color7 bold
 color listfocus color0 color3
 color listfocus_unread color0 color3 bold
 color listnormal_unread color14 default
