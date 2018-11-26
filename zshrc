@@ -112,6 +112,7 @@ alias matlab='/usr/local/MATLAB/R2017a/bin/matlab'
 alias maas="expr $(cal | awk 'FNR>2{d+=NF}END{print d}') - $(date +%d)"
 alias gg="exit"
 alias ledger="ledger -f ~/Dropbox/ledger.dat"
+alias report="report -f ~/Dropbox/ledger.dat"
 
 mkcdir () {
     mkdir -p -- "$1" &&
