@@ -45,8 +45,8 @@ report.inConky.labels      = Description
 ### 'todo' Report Definition
 report.todo.columns     = id,description,due
 report.todo.labels      = ID,Description, Due
-report.todo.description = Todo Items for Today
-report.todo.filter      = status:pending +MONTH
+report.todo.description = Tasks with due dates
+report.todo.filter      = status:pending +YEAR
 report.todo.dateformat  = D/M, A @H:N
 
 ### 'todo to Show in Conky' Report Definition
