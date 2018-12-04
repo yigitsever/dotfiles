@@ -111,6 +111,8 @@ set nospell
 " Cool tab completion stuff
 set wildmenu
 set wildmode=list:longest,full
+set wildignore=*.o,*.obj,*.class
+
 
 set encoding=utf-8
 set scrolloff=4 " Keep n lines above/below cursor
