@@ -158,3 +158,4 @@ alias maybe='task due:someday list'
 alias music='mpv --no-vid'
 alias s="du -hs * | sort -rh | head -5"
 alias f="find . -name"
+alias b="buku --suggest"
