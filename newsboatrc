@@ -1,4 +1,4 @@
-browser "firefox %u"
+browser "vivaldi-stable %u"
 color info black color7 bold
 color listfocus color0 color3
 color listfocus_unread color0 color3 bold
