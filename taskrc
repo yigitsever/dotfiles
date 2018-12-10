@@ -52,9 +52,9 @@ report.todo.dateformat  = D/M, A @H:N
 ### 'todo to Show in Conky' Report Definition
 report.todoConky.columns     = description,due
 report.todoConky.labels      = Description, Due
-report.todoConky.description = Todo Items for Today
-report.todoConky.filter      = status:pending +TODAY
-report.todoConky.dateformat  = H:N
+report.todoConky.description = Tasks to do
+report.todoConky.filter      = status:pending and due.after:now and due.before:later
+report.todoConky.dateformat  = d-m-y H:N (A)
 
 ### contexts
 context.home = +@home or +@online
