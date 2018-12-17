@@ -99,10 +99,8 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=8
 
-" Visual aid to deter from typing past column 110.
+" Visual aid to deter from typing past column 110, color is set by gruvbox
 set colorcolumn=110
-" Colors don't work atm so Red whatever is doesn't work
-highlight ColorColumn ctermfg = Red
 
 " Use english for spellchecking, but don't spellcheck by default
 set spell spelllang=en_us
@@ -155,6 +153,25 @@ set termguicolors
 
 " Favorite NEW Color Scheme
 colorscheme gruvbox
+" https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
+"let g:gruvbox_bold = '1'
+let g:gruvbox_italic = '1'
+"let g:gruvbox_underline = '1'
+"let g:gruvbox_undercurl = '1'
+"let g:gruvbox_contrast_dark = 'medium'
+"let g:gruvbox_contrast_light = 'medium'
+let g:gruvbox_hls_cursor = 'purple'
+"let g:gruvbox_number_column = ''
+"let g:gruvbox_sign_column = 'bg1'
+let g:gruvbox_color_column = 'red'
+"let g:gruvbox_vert_split = 'bg0'
+"let g:gruvbox_italicize_comments = '1'
+"let g:gruvbox_italicize_strings = '0'
+"let g:gruvbox_invert_selection = '1'
+"let g:gruvbox_invert_signs = '1'
+"let g:gruvbox_improved_strings = '1'
+"let g:gruvbox_improved_warnings = '1'
+
 set background=dark    " Setting dark mode
 
 " }}}
