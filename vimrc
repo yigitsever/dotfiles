@@ -12,6 +12,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
@@ -329,3 +332,15 @@ au FileType ledger noremap { ?^\d<CR>
 au FileType ledger noremap } /^\d<CR>
 "}}}
 
+"{{{ UltiSnips/YouCompleteMe
+let g:UltiSnipsEditSplit="vertical"
+
+" these navigate ycm
+let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-k>']
+
+" ctrl + l expands the snippet, c + j/k navigates placeholders
+let g:UltiSnipsExpandTrigger = "<C-l>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+"}}}
