@@ -186,7 +186,7 @@ set background=dark    " Setting dark mode
 function! Browser ()
     let line = getline (".")
     let line = matchstr (line, "http[^   ]*")
-    exec "!firefox ".line
+    exec "!vivaldi-stable ".line
 endfunction
 
 "}}}
@@ -333,7 +333,9 @@ au FileType ledger noremap } /^\d<CR>
 "}}}
 
 "{{{ UltiSnips/YouCompleteMe
+set runtimepath+=~/.vim/my-snippets/
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir='~/.vim/my-snippets/UltiSnips'
 
 " these navigate ycm
 let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
