@@ -30,6 +30,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'vimwiki/vimwiki'
 
 Plugin 'ledger/vim-ledger'
 Plugin 'neovimhaskell/haskell-vim'
