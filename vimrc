@@ -34,6 +34,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ledger/vim-ledger'
 Plugin 'neovimhaskell/haskell-vim'
 
+Plugin 'mhinz/vim-startify'
+Plugin 'ryanoasis/vim-devicons'
+
 call vundle#end()            " required
 "filetype plugin indent on    " required
 
@@ -307,10 +310,10 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 let g:syntastic_mode_map = {
-    \ 'mode': 'passive',
-    \ 'active_filetypes': [],
-    \ 'passive_filetypes': []
-\}
+            \ 'mode': 'passive',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': []
+            \}
 
 nnoremap <Leader>s :SyntasticCheck<CR>
 nnoremap <Leader>r :SyntasticReset<CR>
@@ -346,3 +349,20 @@ let g:UltiSnipsExpandTrigger = "<C-l>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 "}}}
+
+"{{{ vim-devicons + vim-startify
+
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+
+let entry_format = "'   ['. index .']'. repeat(' ', (3 - strlen(index)))"
+
+if exists('*WebDevIconsGetFileTypeSymbol')  " support for vim-devicons
+    let entry_format .= ". WebDevIconsGetFileTypeSymbol(entry_path) .' '.  entry_path"
+else
+    let entry_format .= '. entry_path'
+endif
+
+"}}}
+
