@@ -12,7 +12,8 @@ export ZSH=/home/yigit/.oh-my-zsh
 # ZSH_THEME="arrow"
 # ZSH_THEME="eastwood"
 # ZSH_THEME="kolo"
-ZSH_THEME="theunraveler"
+# --> # ZSH_THEME="theunraveler"
+ZSH_THEME="spaceship"
 # ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
