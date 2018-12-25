@@ -55,7 +55,7 @@ report.todoConky.labels      = Description, Due
 report.todoConky.description = Tasks to do
 report.todoConky.sort        = due+
 report.todoConky.filter      = status:pending and due.after:now and due.before:later
-report.todoConky.dateformat  = d-m-y H:N (A)
+report.todoConky.dateformat  = D-M-y H:N (A)
 
 ### contexts
 context.home = +@home or +@online
