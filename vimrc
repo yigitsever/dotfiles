@@ -28,25 +28,23 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'dbeniamine/cheat.sh-vim'
-Plugin 'ap/vim-css-color'
+Plugin 'chrisbra/Colorizer'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vimwiki/vimwiki'
-
 Plugin 'ledger/vim-ledger'
 Plugin 'neovimhaskell/haskell-vim'
 
 Plugin 'mhinz/vim-startify'
-Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons' " asks to be placed last, sure
 
 call vundle#end()            " required
-"filetype plugin indent on    " required
 
 "}}}
 
 "{{{Auto Commands
 
 " Automatically cd into the directory that the file is in
-autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
+"autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
 
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
@@ -55,30 +53,30 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Restore cursor position to where it was before
-augroup JumpCursorOnEdit
-    au!
-    autocmd BufReadPost *
-                \ if expand("<afile>:p:h") !=? $TEMP |
-                \   if line("'\"") > 1 && line("'\"") <= line("$") |
-                \     let JumpCursorOnEdit_foo = line("'\"") |
-                \     let b:doopenfold = 1 |
-                \     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
-                \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
-                \        let b:doopenfold = 2 |
-                \     endif |
-                \     exe JumpCursorOnEdit_foo |
-                \   endif |
-                \ endif
-    " Need to postpone using "zv" until after reading the modelines.
-    autocmd BufWinEnter *
-                \ if exists("b:doopenfold") |
-                \   exe "normal zv" |
-                \   if(b:doopenfold > 1) |
-                \       exe  "+".1 |
-                \   endif |
-                \   unlet b:doopenfold |
-                \ endif
-augroup END
+"augroup JumpCursorOnEdit
+    "au!
+    "autocmd BufReadPost *
+                "\ if expand("<afile>:p:h") !=? $TEMP |
+                "\   if line("'\"") > 1 && line("'\"") <= line("$") |
+                "\     let JumpCursorOnEdit_foo = line("'\"") |
+                "\     let b:doopenfold = 1 |
+                "\     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
+                "\        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+                "\        let b:doopenfold = 2 |
+                "\     endif |
+                "\     exe JumpCursorOnEdit_foo |
+                "\   endif |
+                "\ endif
+    "" Need to postpone using "zv" until after reading the modelines.
+    "autocmd BufWinEnter *
+                "\ if exists("b:doopenfold") |
+                "\   exe "normal zv" |
+                "\   if(b:doopenfold > 1) |
+                "\       exe  "+".1 |
+                "\   endif |
+                "\   unlet b:doopenfold |
+                "\ endif
+"augroup END
 
 "}}}
 
@@ -117,7 +115,6 @@ set nospell
 set wildmenu
 set wildmode=list:longest,full
 set wildignore=*.o,*.obj,*.class
-
 
 set encoding=utf-8
 set scrolloff=4 " Keep n lines above/below cursor
@@ -160,24 +157,10 @@ set termguicolors
 
 " Favorite NEW Color Scheme
 colorscheme gruvbox
+
 " https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
-"let g:gruvbox_bold = '1'
-let g:gruvbox_italic = '1'
-"let g:gruvbox_underline = '1'
-"let g:gruvbox_undercurl = '1'
-"let g:gruvbox_contrast_dark = 'medium'
-"let g:gruvbox_contrast_light = 'medium'
 let g:gruvbox_hls_cursor = 'purple'
-"let g:gruvbox_number_column = ''
-"let g:gruvbox_sign_column = 'bg1'
 let g:gruvbox_color_column = 'red'
-"let g:gruvbox_vert_split = 'bg0'
-"let g:gruvbox_italicize_comments = '1'
-"let g:gruvbox_italicize_strings = '0'
-"let g:gruvbox_invert_selection = '1'
-"let g:gruvbox_invert_signs = '1'
-"let g:gruvbox_improved_strings = '1'
-"let g:gruvbox_improved_warnings = '1'
 
 set background=dark    " Setting dark mode
 
@@ -281,25 +264,28 @@ nnoremap <Leader>t "=strftime("%F")<CR>P
 "}}}
 
 "{{{Tagbar Configuration
+
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 let g:tagbar_width = 25
+
 "}}}
 
 "{{{ Airline Configuration
+
 let g:airline_powerline_fonts = 1 " fira code
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 
-"let g:airline_skip_empty_sections = 1
-
 "}}}
 
 "{{{ NERDTree Configuration
+
 let g:NERDTreeWinSize=25
+
 "}}}
 
 "{{{ Syntastic Configuration
@@ -326,20 +312,25 @@ let g:syntastic_enable_perl_checker = 1
 
 "}}}
 
-"{{{ Ledger/YouCompleteMe
+"{{{ YouCompleteMe
 
-if exists('g:ycm_filetype_blacklist')
-    call extend(g:ycm_filetype_blacklist, { 'ledger': 1 })
-endif
+let g:ycm_autoclose_preview_window_after_completion = 1
+map <leader>g :YcmCompleter GoToDefinition<CR>
+
+"}}}
+
+"{{{ Ledger
+
 let g:ledger_extra_options = '--pedantic --explicit --check-payees'
 au FileType ledger noremap { ?^\d<CR>
 au FileType ledger noremap } /^\d<CR>
+
 "}}}
 
 "{{{ UltiSnips/YouCompleteMe
 set runtimepath+=~/.vim/my-snippets/
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir='~/.vim/my-snippets/UltiSnips'
+let g:UltiSnipsSnippetsDir=$HOME.'/.vim/my-snippets/UltiSnips'
 
 " these navigate ycm
 let g:ycm_key_list_select_completion = ['<TAB>', '<C-j>']
@@ -349,9 +340,10 @@ let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-k>']
 let g:UltiSnipsExpandTrigger = "<C-l>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+let g:UltiSnipsListSnippets = "<C-h>"
 "}}}
 
-"{{{ vim-devicons + vim-startify
+"{{{ vim-startify
 
 function! StartifyEntryFormat()
     return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
