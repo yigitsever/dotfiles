@@ -315,7 +315,30 @@ let g:syntastic_enable_perl_checker = 1
 "{{{ YouCompleteMe
 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_always_populate_location_list = 1
+let g:ycm_error_symbol = '✗'
+let g:ycm_warning_symbol = '⚑'
+
 map <leader>g :YcmCompleter GoToDefinition<CR>
+
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar': 1,
+      \ 'qf': 1,
+      \ 'notes': 1,
+      \ 'markdown': 1,
+      \ 'unite': 1,
+      \ 'text': 1,
+      \ 'startify': 1,
+      \ 'vimwiki': 1,
+      \ 'pandoc': 1,
+      \ 'infolog': 1,
+      \ 'mail': 1
+      \}
+
+let g:ycm_filetype_specific_completion_to_disable = {
+      \ 'gitcommit': 1,
+      \ 'vim': 1
+      \}
 
 "}}}
 
