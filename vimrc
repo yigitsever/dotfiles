@@ -302,12 +302,14 @@ let g:syntastic_mode_map = {
             \ 'passive_filetypes': []
             \}
 
+
 nnoremap <Leader>s :SyntasticCheck<CR>
 nnoremap <Leader>r :SyntasticReset<CR>
 nnoremap <Leader>i :SyntasticInfo<CR>
 noremap <Leader>m :SyntasticToggleMode<CR>
 
 let g:syntastic_perl_checkers = ['perl', 'podchecker']
+let g:syntastic_java_checkers = []
 let g:syntastic_enable_perl_checker = 1
 
 "}}}
