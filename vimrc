@@ -33,6 +33,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vimwiki/vimwiki'
 Plugin 'ledger/vim-ledger'
 Plugin 'neovimhaskell/haskell-vim'
+Plugin 'farmergreg/vim-lastplace'
 
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons' " asks to be placed last, sure
@@ -51,32 +52,6 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " Close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Restore cursor position to where it was before
-"augroup JumpCursorOnEdit
-    "au!
-    "autocmd BufReadPost *
-                "\ if expand("<afile>:p:h") !=? $TEMP |
-                "\   if line("'\"") > 1 && line("'\"") <= line("$") |
-                "\     let JumpCursorOnEdit_foo = line("'\"") |
-                "\     let b:doopenfold = 1 |
-                "\     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
-                "\        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
-                "\        let b:doopenfold = 2 |
-                "\     endif |
-                "\     exe JumpCursorOnEdit_foo |
-                "\   endif |
-                "\ endif
-    "" Need to postpone using "zv" until after reading the modelines.
-    "autocmd BufWinEnter *
-                "\ if exists("b:doopenfold") |
-                "\   exe "normal zv" |
-                "\   if(b:doopenfold > 1) |
-                "\       exe  "+".1 |
-                "\   endif |
-                "\   unlet b:doopenfold |
-                "\ endif
-"augroup END
 
 "}}}
 
