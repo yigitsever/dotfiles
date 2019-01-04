@@ -31,6 +31,7 @@ ZSH_THEME="spaceship"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
+export LS_COLORS="$(vivid generate snazzy)"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -107,7 +108,6 @@ alias free='free -m'
 alias df='df -h'
 alias mirrors='sudo pacman-mirrors -f 0 && sudo pacman -Syy'
 alias -g C='| xclip -selection clipboard' # Copy to clipboard
-alias silence='gksudo rmmod pcspkr'
 alias bc='bc -l'
 alias matlab='/usr/local/MATLAB/R2017a/bin/matlab'
 alias maas="expr $(cal | awk 'FNR>2{d+=NF}END{print d}') - $(date +%d)"
