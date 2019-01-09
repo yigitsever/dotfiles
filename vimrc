@@ -19,10 +19,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 
-Plugin 'morhetz/gruvbox' " best theme
+Plugin 'morhetz/gruvbox' " best theme?
+Plugin 'whatyouhide/vim-gotham'
 
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
@@ -32,8 +32,8 @@ Plugin 'chrisbra/Colorizer'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vimwiki/vimwiki'
 Plugin 'ledger/vim-ledger'
-Plugin 'neovimhaskell/haskell-vim'
 Plugin 'farmergreg/vim-lastplace'
+Plugin 'sheerun/vim-polyglot'
 
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons' " asks to be placed last, sure
@@ -56,6 +56,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "}}}
 
 "{{{Misc Settings
+
+" If installed using git
+set rtp+=~/.fzf
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
@@ -131,7 +134,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
 " Favorite NEW Color Scheme
-colorscheme gruvbox
+colorscheme gotham
 
 " https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
 let g:gruvbox_hls_cursor = 'purple'
@@ -158,7 +161,7 @@ let themeindex=0
 function! RotateColorTheme()
     let y = -1
     while y == -1
-        let colorstring = "#gruvbox#artesanal#ron#elflord#evening#koehler#murphy#pablo#desert#torte#"
+        let colorstring = "#gruvbox#gotham"
         let x = match( colorstring, "#", g:themeindex )
         let y = match( colorstring, "#", x + 1 )
         let g:themeindex = x + 1
