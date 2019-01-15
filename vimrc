@@ -1,4 +1,4 @@
-";{{{Vundle Config
+"{{{Vundle Config
 
 syntax on
 filetype plugin indent on
