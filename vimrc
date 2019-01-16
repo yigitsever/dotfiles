@@ -19,8 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 
-Plugin 'morhetz/gruvbox' " best theme?
-Plugin 'whatyouhide/vim-gotham'
+Plugin 'whatyouhide/vim-gotham' " best theme.
 
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
@@ -82,8 +81,9 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=8
 
-" Visual aid to deter from typing past column 110, color is set by gruvbox
+" Visual aid to deter from typing past column 110
 set colorcolumn=110
+
 
 " Use english for spellchecking, but don't spellcheck by default
 set spell spelllang=en_us
@@ -136,10 +136,6 @@ set termguicolors
 " Favorite NEW Color Scheme
 colorscheme gotham
 
-" https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
-let g:gruvbox_hls_cursor = 'purple'
-let g:gruvbox_color_column = 'red'
-
 set background=dark    " Setting dark mode
 
 " }}}
@@ -157,22 +153,22 @@ endfunction
 "}}}
 
 "{{{Theme Rotating
-let themeindex=0
-function! RotateColorTheme()
-    let y = -1
-    while y == -1
-        let colorstring = "#gruvbox#gotham#"
-        let x = match( colorstring, "#", g:themeindex )
-        let y = match( colorstring, "#", x + 1 )
-        let g:themeindex = x + 1
-        if y == -1
-            let g:themeindex = 0
-        else
-            let themestring = strpart(colorstring, x + 1, y - x - 1)
-            return ":colorscheme ".themestring
-        endif
-    endwhile
-endfunction
+"let themeindex=0
+"function! RotateColorTheme()
+    "let y = -1
+    "while y == -1
+        "let colorstring = "#gotham#"
+        "let x = match( colorstring, "#", g:themeindex )
+        "let y = match( colorstring, "#", x + 1 )
+        "let g:themeindex = x + 1
+        "if y == -1
+            "let g:themeindex = 0
+        "else
+            "let themestring = strpart(colorstring, x + 1, y - x - 1)
+            "return ":colorscheme ".themestring
+        "endif
+    "endwhile
+"endfunction
 " }}}
 
 "}}}
@@ -198,7 +194,7 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 nnoremap <silent> <C-t> :tabnew<CR>
 
 " Rotate Color Scheme <F8>
-nnoremap <silent> <F8> :execute RotateColorTheme()<CR>
+"nnoremap <silent> <F8> :execute RotateColorTheme()<CR>
 
 " FixIt from YCM
 map <F9> :YcmCompleter FixIt<CR>
