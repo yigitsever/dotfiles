@@ -14,6 +14,7 @@ Plugin 'vim-syntastic/syntastic'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'tmsvg/pear-tree'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
