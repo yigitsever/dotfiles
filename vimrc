@@ -140,6 +140,9 @@ set termguicolors
 colorscheme gotham
 
 set background=dark    " Setting dark mode
+highlight ColorColumn guibg='DarkRed'
+highlight NormalNC guibg='Black'
+highlight NormalNC guifg='Gray'
 
 " }}}
 
