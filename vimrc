@@ -25,7 +25,6 @@ Plugin 'whatyouhide/vim-gotham' " best theme.
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'chrisbra/Colorizer'
@@ -34,6 +33,9 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'ledger/vim-ledger'
 Plugin 'farmergreg/vim-lastplace'
 Plugin 'sheerun/vim-polyglot'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons' " asks to be placed last, sure
