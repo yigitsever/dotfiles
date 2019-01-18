@@ -162,3 +162,4 @@ alias f="find . -name"
 alias b="buku --suggest"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
