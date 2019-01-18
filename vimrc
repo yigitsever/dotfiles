@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'ludovicchabant/vim-gutentags'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
