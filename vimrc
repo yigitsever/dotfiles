@@ -1,4 +1,4 @@
-"{{{Vundle Config
+"{{{Vundle
 
 syntax on
 filetype plugin indent on
@@ -244,7 +244,7 @@ nnoremap <Leader>t "=strftime("%F")<CR>P
 
 "}}}
 
-"{{{Tagbar Configuration
+"{{{Tagbar
 
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
@@ -253,7 +253,7 @@ let g:tagbar_width = 25
 
 "}}}
 
-"{{{ Airline Configuration
+"{{{ Airline
 
 let g:airline_powerline_fonts = 1 " fira code
 
@@ -263,13 +263,13 @@ let g:airline#extensions#ycm#enabled = 1
 
 "}}}
 
-"{{{ NERDTree Configuration
+"{{{ NERDTree
 
 let g:NERDTreeWinSize=25
 
 "}}}
 
-"{{{ Syntastic Configuration
+"{{{ Syntastic
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 4
@@ -364,3 +364,8 @@ else
 endif
 
 "}}}
+
+"{{{ vimwiki
+let g:vimwiki_list = [{'path': '/home/yigit/Dropbox/personal_wiki'}]
+"}}}
+
