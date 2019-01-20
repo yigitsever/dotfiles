@@ -59,7 +59,16 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cpanm perl taskwarrior colored-man-pages zsh-autosuggestions)
+plugins=(
+    colored-man-pages
+    cpanm
+    dircycle
+    git
+    gitignore
+    taskwarrior
+    tmux
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,13 +99,11 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-#
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 alias ll='ls -alhF --color=yes'
 alias la='ls -A'
 alias l='ls -CF'
-alias vim='nvim'        # ugh.
+alias vim='nvim'
 alias pacup='sudo pacman -Syu'
 alias bashrc='nvim ~/.zshrc && source ~/.zshrc'
 alias taskrc='nvim ~/.taskrc'
@@ -109,7 +116,6 @@ alias df='df -h'
 alias mirrors='sudo pacman-mirrors -f 0 && sudo pacman -Syy'
 alias -g C='| xclip -selection clipboard' # Copy to clipboard
 alias bc='bc -l'
-alias matlab='/usr/local/MATLAB/R2017a/bin/matlab'
 alias maas="expr $(cal | awk 'FNR>2{d+=NF}END{print d}') - $(date +%d)"
 alias gg="exit"
 alias ledger="ledger -f ~/Dropbox/ledger.dat"
@@ -136,9 +142,6 @@ export GPG_TTY=$(tty)
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 export GEM_HOME=$HOME/.gem
 
-#export NVM_DIR="/home/yigit/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Getting Things Done & Taskwarrior Related
 alias in='task add +in' # Alias for tasks with in tag (in tray)
 alias inc='task +in +PENDING count'     # Reporting the number of in things
@@ -162,4 +165,3 @@ alias f="find . -name"
 alias b="buku --suggest"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
