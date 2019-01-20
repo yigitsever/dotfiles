@@ -67,6 +67,7 @@ plugins=(
     gitignore
     taskwarrior
     tmux
+    you-should-use
     z
     zsh-autosuggestions
 )
@@ -126,8 +127,6 @@ mkcdir () {
     mkdir -p -- "$1" &&
         cd -P -- "$1"
 }
-
-. /home/yigit/bin/z.sh  # z github told me to put this here
 
 PATH="/home/yigit/perl5/bin${PATH+:}${PATH}"; export PATH;
 PERL5LIB="/home/yigit/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
