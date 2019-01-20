@@ -67,6 +67,7 @@ plugins=(
     gitignore
     taskwarrior
     tmux
+    z
     zsh-autosuggestions
 )
 
