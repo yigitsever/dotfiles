@@ -24,7 +24,9 @@
     ~/.config/rtv/rtv.cfg                      : rtv.cfg
     ~/.config/mpv/mpv.conf                     : mpv.conf
     ~/.Xmodmap                                 : xmodmap
-    ~/.oh-my-zsh/custom/plugins/tmux          : tmux
+    ~/.oh-my-zsh/custom/plugins/tmux           : tmux
+    ~/.config/i3                               : i3
+    ~/.config/polybar                          : polybar
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
