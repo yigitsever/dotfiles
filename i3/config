@@ -7,17 +7,21 @@ set $alt Mod1
 
 #autostart
 # swap caps lock and escape
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-
+#exec --no-startup-id xmodmap -e "clear lock"
+#exec --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+#exec --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/alone-2-1920×1080.jpg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
-exec_always--no-startup-id $HOME/.config/polybar/launch.sh
+exec--no-startup-id $HOME/.config/polybar/launch.sh
+
+exec_always--no-startup-id setxkbmap -option caps:swapescape
+exec_always--no-startup-id setxkbmap -option grp:alt_shift_toggle
 exec_always--no-startup-id setxkbmap -layout us,tr
-exec_always--no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
+
+exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
+exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
 
 #new_window none
 #new_float normal
