@@ -5,29 +5,29 @@
 
 - clean: ['~']
 
-- link                                         :
-    ~/.dotfiles                                : ''
-    ~/.tmux.conf                               : tmux.conf
-    ~/.gitconfig                               : gitconfig
-    ~/.ledgerrc                                : ledgerrc
-    ~/.taskrc                                  : taskrc
-    ~/.zshrc                                   : zshrc
-    ~/.config/nvim/init.vim                    : vimrc
-    ~/.newsboat/config                         : newsboatrc
-    ~/.newsboat/urls                           : newsboaturls
-    ~/.ycm_extra_conf.py                       : ycm_extra_conf
-    ~/.config/kitty/kitty.conf                 : kitty.conf
-    ~/.config/ranger                           : ranger
-    ~/.config/redshift.conf                    : redshift.conf
-    ~/.config/rtv/rtv.cfg                      : rtv.cfg
-    ~/.config/mpv/mpv.conf                     : mpv.conf
-    ~/.Xmodmap                                 : xmodmap
-    ~/.oh-my-zsh/custom/plugins/tmux           : tmux
-    ~/.config/i3                               : i3
-    ~/.config/polybar                          : polybar
+- link                                            :
+    ~/.dotfiles                                   : ''
+    ~/.tmux.conf                                  : tmux.conf
+    ~/.gitconfig                                  : gitconfig
+    ~/.ledgerrc                                   : ledgerrc
+    ~/.taskrc                                     : taskrc
+    ~/.zshrc                                      : zshrc
+    ~/.config/nvim/init.vim                       : vimrc
+    ~/.newsboat/config                            : newsboatrc
+    ~/.newsboat/urls                              : newsboaturls
+    ~/.ycm_extra_conf.py                          : ycm_extra_conf
+    ~/.config/kitty/kitty.conf                    : kitty.conf
+    ~/.config/ranger                              : ranger
+    ~/.config/redshift.conf                       : redshift.conf
+    ~/.config/rtv/rtv.cfg                         : rtv.cfg
+    ~/.config/mpv/mpv.conf                        : mpv.conf
+    ~/.Xmodmap                                    : xmodmap
+    ~/.oh-my-zsh/custom/plugins/tmux              : tmux
+    ~/.config/i3                                  : i3
+    ~/.config/polybar                             : polybar
     ~/.config/betterlockscreen/betterlockscreenrc : betterlockscreenrc
-    ~/.config/compton/compton.conf : compton.conf
-    ~/.config/dunst/dunstrc : dunstrc
+    ~/.config/compton/compton.conf                : compton.conf
+    ~/.config/dunst/dunstrc                       : dunstrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

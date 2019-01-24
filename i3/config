@@ -6,16 +6,13 @@ set $mod Mod4
 set $alt Mod1
 
 #autostart
-# swap caps lock and escape
-#exec --no-startup-id xmodmap -e "clear lock"
-#exec --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-#exec --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/alone-2-1920×1080.jpg
+exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/selection.jpg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
 exec--no-startup-id $HOME/.config/polybar/launch.sh
 
+# swap caps lock and escape
 exec_always--no-startup-id setxkbmap -option caps:swapescape
 exec_always--no-startup-id setxkbmap -option grp:alt_shift_toggle
 exec_always--no-startup-id setxkbmap -layout us,tr
@@ -23,27 +20,11 @@ exec_always--no-startup-id setxkbmap -layout us,tr
 exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
 exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
 
-#new_window none
-#new_float normal
-#hide_edge_borders none
-
 gaps inner 5
 gaps outer 5
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font for window titles
 font pango:Lato 11
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
@@ -54,11 +35,11 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+d exec rofi -show combi
 
 # lock screen
-bindsym $mod+shift+x exec betterlockscreen -l dim -t "Welcome back"
+bindsym $mod+shift+x exec betterlockscreen -l dimblur -t "Welcome back"
 
 # change focus
 bindsym $mod+h focus left
@@ -86,6 +67,7 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
+
 # split in vertical orientation
 bindsym $mod+v split v
 
