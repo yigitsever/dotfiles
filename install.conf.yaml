@@ -25,6 +25,7 @@
     ~/.oh-my-zsh/custom/plugins/tmux           : tmux
     ~/.config/i3                               : i3
     ~/.config/polybar                          : polybar
+    ~/.config/betterlockscreen/betterlockscreenrc : betterlockscreenrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
