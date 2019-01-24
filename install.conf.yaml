@@ -27,6 +27,7 @@
     ~/.config/polybar                          : polybar
     ~/.config/betterlockscreen/betterlockscreenrc : betterlockscreenrc
     ~/.config/compton/compton.conf : compton.conf
+    ~/.config/dunst/dunstrc : dunstrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
