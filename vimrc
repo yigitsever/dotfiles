@@ -367,5 +367,6 @@ endif
 
 "{{{ vimwiki
 let g:vimwiki_list = [{'path': '/home/yigit/Dropbox/personal_wiki'}]
+map <Leader>b <Plug>VimwikiToggleListItem
 "}}}
 
