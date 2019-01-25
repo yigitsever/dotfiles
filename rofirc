@@ -1,0 +1,11 @@
+rofi.color-enabled: true
+rofi.color-window: #141021, #0a0f14, #195466
+rofi.color-normal: #141021, #ffeefc, #195466, #c23127, #ffeefc
+rofi.color-active: #141021, #2aa889, #195466, #d26939, #ffeefc
+rofi.color-urgent: #141021, #e4b226, #195466, #e4b226, #ffeefc
+rofi.width: 800
+rofi.padding: 50
+rofi.font: Lato 18
+rofi.bw: 3
+rofi.separator-style: solid
+rofi.hide-scrollbar: true

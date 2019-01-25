@@ -28,6 +28,7 @@
     ~/.config/betterlockscreen/betterlockscreenrc : betterlockscreenrc
     ~/.config/compton/compton.conf                : compton.conf
     ~/.config/dunst/dunstrc                       : dunstrc
+    ~/.config/rofi/config                         : rofirc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
