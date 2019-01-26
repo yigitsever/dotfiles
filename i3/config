@@ -9,16 +9,17 @@ set $alt Mod1
 exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/selection.jpg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
+exec --no-startup-id dropbox
+exec --no-startup-id copyq
 
 exec--no-startup-id $HOME/.config/polybar/launch.sh
 
-# swap caps lock and escape
-exec_always--no-startup-id setxkbmap -option caps:swapescape
-exec_always--no-startup-id setxkbmap -option grp:alt_shift_toggle
-exec_always--no-startup-id setxkbmap -layout us,tr
+# swap caps lock and escape, set keyboard layout
+exec --no-startup-id setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape
 
 exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
 exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
+exec --no-startup-id redshift
 
 gaps inner 5
 gaps outer 5
@@ -28,6 +29,9 @@ font pango:Lato 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
+
+# swap caps lock and escape, set keyboard layout
+bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -39,7 +43,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show combi
 
 # lock screen
-bindsym $mod+shift+x exec betterlockscreen -l dimblur -t "Welcome back"
+bindsym $mod+shift+x exec betterlockscreen -l dim -t "Welcome back"
 
 # change focus
 bindsym $mod+h focus left
@@ -159,7 +163,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 2
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
