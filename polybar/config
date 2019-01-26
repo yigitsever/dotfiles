@@ -20,6 +20,7 @@
     secondary = #888ca6
     alert = #c23127
     brown = #d65d0e
+    purple = #b16286
     apricot = #fb4934
     green = #689d6a
     red = #cc241d
@@ -48,12 +49,12 @@
     module-margin-right = 0
 
     dpi=96
-    font-0 = FuraCode Nerd Font Mono:size=10;1
+    font-0 = Fira Code:size=10;1
     font-1 = Lato:size=10;1
     font-2 = Raleway:size=10;1
     font-3 = FuraCode Nerd Font Mono:size=16;4
 
-    modules-left = i3
+    modules-left = i3 pulseaudio
     modules-center = xwindow
     modules-right = eth date xkeyboard
 
@@ -78,10 +79,11 @@
     format = <label-layout> <label-indicator>
     format-spacing = 0
 
-    format-prefix = ⌨
-    format-prefix-padding = 1
+    format-prefix = " ⌨ "
+    format-prefix-padding = 0
     format-prefix-background = ${colors.cyan}
     format-prefix-foreground = ${colors.background}
+    format-prefix-font = 4
 
     label-layout = %layout%
     label-layout-padding = 1
@@ -130,12 +132,13 @@
 
     format-connected = <label-connected>
 
-    format-connected-prefix = 
+    format-connected-prefix = ▼
+
     format-connected-prefix-padding = 1
     format-connected-prefix-background = ${colors.green}
     format-connected-prefix-foreground = ${colors.background}
 
-    format-connected-suffix = 
+    format-connected-suffix = ▲
     format-connected-suffix-padding = 1
     format-connected-suffix-background = ${colors.brown}
     format-connected-suffix-foreground = ${colors.foreground}
@@ -178,29 +181,22 @@
     type = internal/pulseaudio
     interval = 5
 
-    format-volume = <label-volume> <bar-volume>
-    label-volume = VOL %percentage%%
-    label-volume-foreground = ${root.foreground}
+    format-volume = <label-volume>
 
-    label-muted = 🔇 muted
-    label-muted-foreground = #666
+    format-volume-prefix = ♫
+    format-volume-prefix-background = ${colors.purple}
+    format-volume-prefix-font = 4
+    format-volume-prefix-padding = 1
 
-    bar-volume-width = 10
-    bar-volume-foreground-0 = #55aa55
-    bar-volume-foreground-1 = #55aa55
-    bar-volume-foreground-2 = #55aa55
-    bar-volume-foreground-3 = #55aa55
-    bar-volume-foreground-4 = #55aa55
-    bar-volume-foreground-5 = #f5a70a
-    bar-volume-foreground-6 = #ff5555
-    bar-volume-gradient = false
-    bar-volume-indicator = |
-    bar-volume-indicator-font = 2
-    bar-volume-fill = ─
-    bar-volume-fill-font = 2
-    bar-volume-empty = ─
-    bar-volume-empty-font = 2
-    bar-volume-empty-foreground = ${colors.foreground_alt}
+    label-volume = %percentage%
+    label-volume-background = ${colors.foreground}
+    label-volume-foreground = ${colors.background}
+    label-volume-padding = 1
+
+    label-muted = 
+    label-muted-background = ${colors.purple}
+    label-muted-foreground = ${colors.foreground}
+    label-muted-padding = 2
 
 [settings]
     screenchange-reload = true
