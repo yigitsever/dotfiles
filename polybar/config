@@ -19,12 +19,12 @@
     primary = #d26937
     secondary = #888ca6
     alert = #c23127
-    brown = #d65d0e
-    purple = #b16286
-    apricot = #fb4934
-    green = #689d6a
-    red = #cc241d
-    cyan = #458588
+    yellow = #b56714
+    purple = #8f3f71
+    apricot = #af3a03
+    green = #427b58
+    red = #9d0006
+    cyan = #076678
 
 [bar/example]
     monitor =
@@ -82,7 +82,7 @@
     format-prefix = " ⌨ "
     format-prefix-padding = 0
     format-prefix-background = ${colors.cyan}
-    format-prefix-foreground = ${colors.background}
+    format-prefix-foreground = ${colors.foreground}
     format-prefix-font = 4
 
     label-layout = %layout%
@@ -132,15 +132,14 @@
 
     format-connected = <label-connected>
 
-    format-connected-prefix = ▼
-
+    format-connected-prefix = 
     format-connected-prefix-padding = 1
     format-connected-prefix-background = ${colors.green}
-    format-connected-prefix-foreground = ${colors.background}
+    format-connected-prefix-foreground = ${colors.foreground}
 
-    format-connected-suffix = ▲
+    format-connected-suffix = 
     format-connected-suffix-padding = 1
-    format-connected-suffix-background = ${colors.brown}
+    format-connected-suffix-background = ${colors.yellow}
     format-connected-suffix-foreground = ${colors.foreground}
 
     label-connected =  %downspeed% %upspeed%
@@ -163,13 +162,13 @@
 
     format-prefix = 
     format-prefix-background = ${colors.apricot}
-    format-prefix-foreground = ${colors.background}
+    format-prefix-foreground = ${colors.foreground}
     format-prefix-font = 4
     format-prefix-padding = 1
 
     format-suffix = 
     format-suffix-background = ${colors.secondary}
-    format-suffix-foreground = ${colors.background}
+    format-suffix-foreground = ${colors.foreground}
     format-suffix-font = 4
     format-suffix-padding = 1
 
