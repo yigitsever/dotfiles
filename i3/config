@@ -34,9 +34,9 @@ floating_modifier $alt
 bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
 # media keys
-bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym $mod+m exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym $mod+Up exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym $mod+Down exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 
 # start a terminal
 bindsym $mod+Return exec kitty
