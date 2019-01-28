@@ -21,9 +21,6 @@ exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
 exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
 exec --no-startup-id redshift &
 
-gaps inner 5
-gaps outer 5
-
 # Font for window titles
 font pango:Lato 11
 
