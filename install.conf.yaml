@@ -10,7 +10,6 @@
     ~/.tmux.conf                                  : tmux.conf
     ~/.gitconfig                                  : gitconfig
     ~/.ledgerrc                                   : ledgerrc
-    ~/.taskrc                                     : taskrc
     ~/.zshrc                                      : zshrc
     ~/.config/nvim/init.vim                       : vimrc
     ~/.newsboat/config                            : newsboatrc
