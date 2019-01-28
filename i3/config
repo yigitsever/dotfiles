@@ -6,7 +6,7 @@ set $mod Mod4
 set $alt Mod1
 
 #autostart
-exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/selection.jpg
+exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/triangle.jpg &
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b &
 exec --no-startup-id dropbox &
