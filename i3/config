@@ -8,9 +8,9 @@ set $alt Mod1
 #autostart
 exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/selection.jpg
 exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -b
-exec --no-startup-id dropbox
-exec --no-startup-id copyq
+exec --no-startup-id compton -b &
+exec --no-startup-id dropbox &
+exec --no-startup-id copyq &
 
 exec--no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -19,7 +19,7 @@ exec --no-startup-id setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_
 
 exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
 exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
-exec --no-startup-id redshift
+exec --no-startup-id redshift &
 
 gaps inner 5
 gaps outer 5
