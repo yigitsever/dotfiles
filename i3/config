@@ -49,6 +49,7 @@ bindsym $mod+d exec rofi -show combi
 
 # lock screen
 bindsym $mod+shift+x exec betterlockscreen -l dim -t "Welcome back"
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
 
 # change focus
 bindsym $mod+h focus left
