@@ -26,10 +26,10 @@
     red = #9d0006
     cyan = #076678
 
-[bar/example]
+[bar/top]
     monitor =
     width = 100%
-    height = 28
+    height = 24
     offset-x = 0
     offset-y = 0
     radius = 0
@@ -43,16 +43,13 @@
     border-top-color = ${colors.background}
     border-bottom-color = ${colors.background}
 
-    padding-left = 2
-    padding-right = 2
-    module-margin-left = 2
-    module-margin-right = 0
+    padding = 2
+    module-margin = 1
 
-    dpi=96
-    font-0 = Fira Code:size=9;1
+    font-0 = scientifica:antialias=false;0
     font-1 = Lato:size=10;1
     font-2 = Raleway:size=10;1
-    font-3 = FuraCode Nerd Font Mono:size=16;4
+    font-3 = FuraCode Nerd Font Mono:size=12;2
 
     modules-left = i3 pulseaudio mpd
     modules-center = xwindow
@@ -70,7 +67,6 @@
 
     format-offline = <label-offline>
     label-offline = mpd is offline
-
 
 [module/xwindow]
     type = internal/xwindow
@@ -93,8 +89,8 @@
     format = <label-layout> <label-indicator>
     format-spacing = 0
 
-    format-prefix = " ⌨ "
-    format-prefix-padding = 0
+    format-prefix = 
+    format-prefix-padding = 1
     format-prefix-background = ${colors.cyan}
     format-prefix-foreground = ${colors.foreground}
     format-prefix-font = 4
@@ -174,7 +170,7 @@
     format = <label>
     format-padding = 1
 
-    format-prefix = 
+    format-prefix = 
     format-prefix-background = ${colors.apricot}
     format-prefix-foreground = ${colors.foreground}
     format-prefix-font = 4
