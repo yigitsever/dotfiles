@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'sheerun/vim-polyglot'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -23,6 +24,9 @@ Plugin 'bling/vim-airline'
 
 Plugin 'whatyouhide/vim-gotham' " best theme.
 
+Plugin 'vimwiki/vimwiki'
+Plugin 'junegunn/goyo.vim'
+
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
@@ -30,10 +34,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'chrisbra/Colorizer'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vimwiki/vimwiki'
 Plugin 'ledger/vim-ledger'
 Plugin 'farmergreg/vim-lastplace'
-Plugin 'sheerun/vim-polyglot'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
