@@ -53,7 +53,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show combi
 
 # lock screen
-bindsym $mod+shift+x exec betterlockscreen -l dim -t "Welcome back"
 exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
 
 # change focus
@@ -132,8 +131,6 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -153,6 +150,16 @@ mode "resize" {
         bindsym Caps_Lock mode "default"
         bindsym $mod+r mode "default"
 }
+
+# session
+mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff" {
+    bindsym $mod+l exec betterlockscreen -l dimblur -t "Welcome back"
+    bindsym $mod+r exec systemctl reboot
+    bindsym $mod+s exit
+    bindsym $mod+p exec systemctl shutdown
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff"
 
 bindsym $mod+r mode "resize"
 
