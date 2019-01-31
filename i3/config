@@ -29,6 +29,9 @@ font pango:Lato 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
 
+# add the selected url to buku
+bindsym $mod+u exec --no-startup-id bukuadd
+
 # swap caps lock and escape, set keyboard layout
 bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
