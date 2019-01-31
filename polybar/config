@@ -49,14 +49,28 @@
     module-margin-right = 0
 
     dpi=96
-    font-0 = Fira Code:size=10;1
+    font-0 = Fira Code:size=9;1
     font-1 = Lato:size=10;1
     font-2 = Raleway:size=10;1
     font-3 = FuraCode Nerd Font Mono:size=16;4
 
-    modules-left = i3 pulseaudio
+    modules-left = i3 pulseaudio mpd
     modules-center = xwindow
     modules-right = eth date xkeyboard
+
+[module/mpd]
+    type = internal/mpd
+    host = 127.0.0.1
+    port = 6600
+
+    format-online = <toggle> <label-song>
+    label-song = %artist% - %title%
+    icon-pause = 
+    icon-play = 
+
+    format-offline = <label-offline>
+    label-offline = mpd is offline
+
 
 [module/xwindow]
     type = internal/xwindow
