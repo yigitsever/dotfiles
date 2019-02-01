@@ -71,7 +71,7 @@
 [module/xwindow]
     type = internal/xwindow
     format = <label>
-    label = %title:0:40:...%
+    label = %title:0:70:...%
 
     y-offset = 10
     label-padding = 1
