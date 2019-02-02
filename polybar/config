@@ -53,7 +53,7 @@
 
     modules-left = i3 pulseaudio mpd
     modules-center = xwindow
-    modules-right = eth date xkeyboard
+    modules-right = download upload date time xkeyboard
 
 [module/mpd]
     type = internal/mpd
@@ -135,7 +135,7 @@
     label-urgent-foreground = ${colors.background}
     label-urgent-padding = 1
 
-[module/eth]
+[module/download]
     type = internal/network
     interface = eno1
     interval = 3.0
@@ -147,12 +147,7 @@
     format-connected-prefix-background = ${colors.green}
     format-connected-prefix-foreground = ${colors.foreground}
 
-    format-connected-suffix = 
-    format-connected-suffix-padding = 1
-    format-connected-suffix-background = ${colors.yellow}
-    format-connected-suffix-foreground = ${colors.foreground}
-
-    label-connected =  %downspeed% %upspeed%
+    label-connected =  %downspeed%
     label-connected-background = ${colors.background_modules}
     label-connected-foreground = ${colors.foreground_modules}
     label-connected-padding = 1
@@ -160,15 +155,30 @@
     format-disconnected = <label-disconnected>
     label-disconnected = %ifname% disconnected 
 
+[module/upload]
+    type = internal/network
+    interface = enp1s0
+    interval = 3.0
+
+    format-connected = <label-connected>
+
+    format-connected-prefix = 
+    format-connected-prefix-padding = 1
+    format-connected-prefix-background = ${colors.yellow}
+    format-connected-prefix-foreground = ${colors.foreground}
+
+    label-connected = %upspeed%
+    label-connected-background = ${colors.background_modules}
+    label-connected-foreground = ${colors.foreground_modules}
+    label-connected-padding = 1
+
 [module/date]
     type = internal/date
     interval = 1
 
-    date = %Y-%m-%d%
-    time = %A %H:%M
-    label = %date% %time%
+    date = %Y-%m-%d %A
+    label = %date%
     format = <label>
-    format-padding = 1
 
     format-prefix = 
     format-prefix-background = ${colors.apricot}
@@ -176,11 +186,23 @@
     format-prefix-font = 4
     format-prefix-padding = 1
 
-    format-suffix = 
-    format-suffix-background = ${colors.secondary}
-    format-suffix-foreground = ${colors.foreground}
-    format-suffix-font = 4
-    format-suffix-padding = 1
+    label-background = ${colors.background_modules}
+    label-foreground = ${colors.foreground_modules}
+    label-padding = 1
+
+[module/time]
+    type = internal/date
+    interval = 1
+
+    time = %H:%M
+    label = %time%
+    format = <label>
+
+    format-prefix = 
+    format-prefix-background = ${colors.secondary}
+    format-prefix-foreground = ${colors.foreground}
+    format-prefix-font = 4
+    format-prefix-padding = 1
 
     label-background = ${colors.background_modules}
     label-foreground = ${colors.foreground_modules}
