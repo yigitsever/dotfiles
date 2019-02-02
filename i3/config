@@ -39,6 +39,9 @@ bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -optio
 bindsym $mod+m exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 bindsym $mod+Up exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bindsym $mod+Down exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym $mod+q exec mpc toggle
+bindsym $mod+Left exec /home/yigit/bin/mpcPrevSong.sh
+bindsym $mod+Right exec mpc next
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -152,20 +155,20 @@ mode "resize" {
 mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff" {
     bindsym $mod+l exec betterlockscreen -l dimblur -t "Welcome back"
     bindsym $mod+r exec systemctl reboot
+    bindsym $mod+p exec systemctl poweroff
     bindsym $mod+s exit
-    bindsym $mod+p exec systemctl shutdown
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff"
 
 bindsym $mod+r mode "resize"
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 5
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused          #458588 #285577 #ffffff #458588   #285577
+client.focused_inactive #b16286 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #927374 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 

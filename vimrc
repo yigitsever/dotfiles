@@ -223,10 +223,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Create Blank Newlines and stay in Normal mode
-nnoremap <silent> zj o<Esc>
-nnoremap <silent> zk O<Esc>
-
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
