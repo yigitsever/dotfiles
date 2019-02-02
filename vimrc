@@ -36,6 +36,7 @@ Plugin 'chrisbra/Colorizer'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ledger/vim-ledger'
 Plugin 'farmergreg/vim-lastplace'
+Plugin 'kshenoy/vim-signature'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
