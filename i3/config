@@ -165,9 +165,6 @@ bindsym $mod+r mode "resize"
 
 for_window [class=".*"] border pixel 4
 
-workspace 8 output HDMI-0
-workspace 9 output HDMI-0
-
 assign [class="^Steam$"] 9
 assign [class="^Thunderbird$"] 8
 
