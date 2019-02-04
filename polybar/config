@@ -28,18 +28,20 @@
 
 [bar/top]
     monitor =
-    width = 100%
-    height = 24
-    offset-x = 0
+    width = 98%
+    height = 20
+    offset-x = 1%
     offset-y = 0
-    radius = 0
+    radius = 5
     fixed-center = true
+    override-redirect = true
+    wm-restack = i3
 
     background = ${colors.background}
     foreground = ${colors.foreground}
 
-    border-top-size = 5
-    border-bottom-size = 5
+    border-top-size = 0
+    border-bottom-size = 0
     border-top-color = ${colors.background}
     border-bottom-color = ${colors.background}
 
