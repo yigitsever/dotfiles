@@ -413,3 +413,26 @@ let g:vimwiki_list = [{'path': '/home/yigit/Dropbox/personal_wiki',
 map <Leader>b <Plug>VimwikiToggleListItem
 "}}}
 
+"{{{ yanks/registers and clips
+
+set clipboard=unnamedplus
+
+" s for substitute
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+nmap S <plug>(SubversiveSubstituteToEndOfLine)
+
+nmap <c-n> <plug>(YoinkPostPasteSwapBack)
+nmap <c-p> <plug>(YoinkPostPasteSwapForward)
+
+let g:yoinkIncludeDeleteOperations = 1
+
+nmap p <plug>(YoinkPaste_p)
+nmap P <plug>(YoinkPaste_P)
+
+nnoremap x d
+xnoremap x d
+
+nnoremap xx dd
+nnoremap X D
+"}}}
