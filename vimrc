@@ -76,6 +76,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-speeddating'
 "search, substitute and abbreviate
 Plugin 'tpope/vim-abolish'
+"helpers for unix
+Plugin 'tpope/vim-eunuch'
+"unicode character metadata
+Plugin 'tpope/vim-characterize'
+"tmux basics
+Plugin 'tpope/vim-tbone'
 
 "fancy start screen
 Plugin 'mhinz/vim-startify'
