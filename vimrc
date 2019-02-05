@@ -60,12 +60,22 @@ Plugin 'kshenoy/vim-signature'
 "git diff in the sign column
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'svermeulen/vim-cutlass'
+Plugin 'svermeulen/vim-subversive'
+Plugin 'svermeulen/vim-yoink'
+
+"enable repeating supported plugin maps with '.'
+Plugin 'tpope/vim-repeat'
 "quoting/parenthesizing made simple
 Plugin 'tpope/vim-surround'
 "pairs of handy bracket mappings
 Plugin 'tpope/vim-unimpaired'
 "git wrapper
 Plugin 'tpope/vim-fugitive'
+"increment dates, times & more
+Plugin 'tpope/vim-speeddating'
+"search, substitute and abbreviate
+Plugin 'tpope/vim-abolish'
 
 "fancy start screen
 Plugin 'mhinz/vim-startify'
