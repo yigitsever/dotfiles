@@ -7,40 +7,67 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+"the plug-in manager for Vim
 Plugin 'gmarik/Vundle.vim'
 
+"A code-completion engine for Vim
 Plugin 'Valloric/YouCompleteMe'
+"syntax checking
 Plugin 'vim-syntastic/syntastic'
+"manages tag files
 Plugin 'ludovicchabant/vim-gutentags'
+"language pack
 Plugin 'sheerun/vim-polyglot'
 
+"snippet solution
 Plugin 'SirVer/ultisnips'
+"default snippets
 Plugin 'honza/vim-snippets'
+"autopair plugin
 Plugin 'tmsvg/pear-tree'
 
+"tree explorer
 Plugin 'scrooloose/nerdtree'
+"displays tags ordered by scope
 Plugin 'majutsushi/tagbar'
+"status/tabline
 Plugin 'bling/vim-airline'
 
-Plugin 'whatyouhide/vim-gotham' " best theme.
+" color theme.
+Plugin 'whatyouhide/vim-gotham'
 
+"Personal wiki
 Plugin 'vimwiki/vimwiki'
+"distraction-free writing
 Plugin 'junegunn/goyo.vim'
 
+"visual display of indent levels
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
+"text alignment
 Plugin 'godlygeek/tabular'
+"access cheat.sh sheets
 Plugin 'dbeniamine/cheat.sh-vim'
+"color code highlight
 Plugin 'chrisbra/Colorizer'
+"comment helper
 Plugin 'scrooloose/nerdcommenter'
+"folding ledger files
 Plugin 'ledger/vim-ledger'
+"reporen files at your last edit position
 Plugin 'farmergreg/vim-lastplace'
+"toggle, display and navigate marks
 Plugin 'kshenoy/vim-signature'
-
-Plugin 'tpope/vim-fugitive'
+"git diff in the sign column
 Plugin 'airblade/vim-gitgutter'
 
+"quoting/parenthesizing made simple
+Plugin 'tpope/vim-surround'
+"pairs of handy bracket mappings
+Plugin 'tpope/vim-unimpaired'
+"git wrapper
+Plugin 'tpope/vim-fugitive'
+
+"fancy start screen
 Plugin 'mhinz/vim-startify'
 Plugin 'ryanoasis/vim-devicons' " asks to be placed last, sure
 
