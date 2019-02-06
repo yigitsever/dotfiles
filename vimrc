@@ -80,8 +80,6 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-eunuch'
 "unicode character metadata
 Plugin 'tpope/vim-characterize'
-"tmux basics
-Plugin 'tpope/vim-tbone'
 
 "fancy start screen
 Plugin 'mhinz/vim-startify'
@@ -406,7 +404,10 @@ endif
 
 "{{{ vimwiki
 let g:vimwiki_list = [{'path': '/home/yigit/Dropbox/personal_wiki',
-          \ 'css_name': '~/Dropbox/personal_wiki/tufte.css'}]
+            \ 'path_html': '~/Dropbox/personal_wiki_html',
+            \ 'css_name': 'tufte.css',
+            \ 'auto_export': 1}]
+let g:vimwiki_global_ext = 0
 map <Leader>b <Plug>VimwikiToggleListItem
 "}}}
 
