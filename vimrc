@@ -169,9 +169,6 @@ set smartcase
 inoremap jj <Esc>
 nnoremap JJJJ <Nop>
 
-" Since I use linux, I want this
-let g:clipbrdDefaultReg = '+'
-
 " https://stackoverflow.com/a/3445040/
 " switch case labels
 set cinoptions=l1
@@ -326,7 +323,7 @@ let g:syntastic_mode_map = {
             \}
 
 
-nnoremap <Leader>s :SyntasticCheck<CR>
+nnoremap <F8> :SyntasticCheck<CR>
 nnoremap <Leader>r :SyntasticReset<CR>
 nnoremap <Leader>i :SyntasticInfo<CR>
 noremap <Leader>m :SyntasticToggleMode<CR>
@@ -413,3 +410,31 @@ let g:vimwiki_list = [{'path': '/home/yigit/Dropbox/personal_wiki',
 map <Leader>b <Plug>VimwikiToggleListItem
 "}}}
 
+"{{{ yanks/registers and clips
+
+set clipboard=unnamed
+
+" s for substitute
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+nmap S <plug>(SubversiveSubstituteToEndOfLine)
+
+nmap <leader>s <plug>(SubversiveSubstituteRange)
+xmap <leader>s <plug>(SubversiveSubstituteRange)
+
+nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
+
+nmap <c-n> <plug>(YoinkPostPasteSwapBack)
+nmap <c-p> <plug>(YoinkPostPasteSwapForward)
+
+let g:yoinkIncludeDeleteOperations = 1
+
+nmap p <plug>(YoinkPaste_p)
+nmap P <plug>(YoinkPaste_P)
+
+nnoremap x d
+xnoremap x d
+
+nnoremap xx dd
+nnoremap X D
+"}}}
