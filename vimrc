@@ -413,7 +413,7 @@ map <Leader>b <Plug>VimwikiToggleListItem
 
 "{{{ yanks/registers and clips
 
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 
 " s for substitute
 nmap s <plug>(SubversiveSubstitute)
