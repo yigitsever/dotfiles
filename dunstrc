@@ -23,8 +23,8 @@ stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = true
 icon_position = left
-max_icon_size = 16
-icon_path = "/usr/share/icons/Papirus/16x16/status:/usr/share/icons/Papirus/16x16/devices/"
+max_icon_size = 0
+icon_path = "/usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/:/usr/share/icons/Papirus-Dark/16x16/places/"
 sticky_history = yes
 dmenu = "/usr/bin/rofi"
 history_length = 20
@@ -41,12 +41,12 @@ context = ctrl+shift+period
 [urgency_low]
 background = "#2f343f"
 foreground = "#d8dee8"
-timeout = 2
+timeout = 6
 
 [urgency_normal]
 background = "#2f343f"
 foreground = "#d8dee8"
-timeout = 4
+timeout = 6
 
 [urgency_critical]
 background = "#2f343f"
