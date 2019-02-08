@@ -57,6 +57,9 @@
     modules-center = xwindow
     modules-right = download upload date time xkeyboard
 
+    tray-position = right
+    tray-background = #00FFFFFF
+
 [module/mpd]
     type = internal/mpd
     host = 127.0.0.1
