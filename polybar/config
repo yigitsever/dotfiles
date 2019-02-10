@@ -60,10 +60,14 @@
     host = 127.0.0.1
     port = 6600
 
-    format-online = <toggle> <label-song>
+    format-online = <toggle> <label-song> <icon-random>
     label-song = %artist% - %title%
     icon-pause = 
     icon-play = 
+    icon-random = 咽
+
+    toggle-on-foreground = ${colors.foreground}
+    toggle-off-foreground = ${colors.background}
 
     format-offline = <label-offline>
     label-offline = mpd is offline
