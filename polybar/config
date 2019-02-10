@@ -27,15 +27,15 @@
     cyan = #076678
 
 [bar/top]
-    monitor =
-    width = 98%
+    monitor = DVI-I-1
+    width = 100%
     height = 20
-    offset-x = 1%
+    offset-x = 0
     offset-y = 0
-    radius = 5
+    radius = 0
     fixed-center = true
-    override-redirect = true
-    wm-restack = i3
+;override-redirect = true
+;wm-restack = i3
 
     background = ${colors.background}
     foreground = ${colors.foreground}
@@ -58,7 +58,8 @@
     modules-right = download upload date time xkeyboard
 
     tray-position = right
-    tray-background = #00FFFFFF
+;tray-background = #00FFFFFF
+    tray-backgroud = ${colors.backgroud}
 
 [module/mpd]
     type = internal/mpd

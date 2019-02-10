@@ -6,12 +6,13 @@ set $mod Mod4
 set $alt Mod1
 
 #autostart
-exec --no-startup-id hsetroot -center ~/Dropbox/Wallpapers/selection.jpg
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b &
 exec --no-startup-id dropbox &
 exec --no-startup-id copyq &
 exec --no-startup-id redshift &
+exec --no-startup-id nm-applet &
+exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate left --output DVI-I-1 --primary --mode 1920x1080 --pos 1132x608 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off &
 
 #launch polybar
 exec--no-startup-id $HOME/.config/polybar/launch.sh
@@ -23,8 +24,14 @@ exec --no-startup-id setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_
 exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
 exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
 
-gaps inner 10
-gaps outer 10
+# set the wallpaper last (hopefully after xrandr)
+exec --no-startup-id hsetroot -fill ~/Dropbox/Wallpapers/TkydJbg.jpg
+
+# lock screen
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
+
+gaps inner 0
+gaps outer 0
 
 # Font for window titles
 font pango:Lato 11
@@ -32,12 +39,14 @@ font pango:Lato 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
 
+# bindings
+
 # shoo the mouse
 bindsym $mod+o exec --no-startup-id xdotool mousemove 1920 1080
 
-# add from selection
+# bookmark from selection
 bindsym $mod+u exec --no-startup-id ~/bin/bukuadd
-# add from clipboard
+# bookmark from clipboard
 bindsym $mod+Shift+u exec --no-startup-id ~/bin/bukuadd_c
 
 # swap caps lock and escape, set keyboard layout
@@ -60,9 +69,6 @@ bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show combi
-
-# lock screen
-exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
 
 # change focus
 bindsym $mod+h focus left
