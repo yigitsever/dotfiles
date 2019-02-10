@@ -116,7 +116,7 @@ alias mv='mv -i'        # Interactive, don't fuck shit up
 alias free='free -m'
 alias df='df -h'
 alias mirrors='sudo pacman-mirrors -f 0 && sudo pacman -Syy'
-alias -g C='| xclip -selection clipboard' # Copy to clipboard
+alias -g C='| xsel -b' # Copy to clipboard
 alias bc='bc -l'
 alias maas="expr $(cal | awk 'FNR>2{d+=NF}END{print d}') - $(date +%d)"
 alias gg="exit"
