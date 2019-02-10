@@ -52,6 +52,8 @@ bindsym $mod+Shift+u exec --no-startup-id ~/bin/bukuadd_c
 # swap caps lock and escape, set keyboard layout
 bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
+bindsym Print exec flameshot gui
+
 # media keys
 bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
