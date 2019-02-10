@@ -400,6 +400,18 @@ else
     let entry_format .= '. entry_path'
 endif
 
+
+
+let g:ascii = [
+            \'             |                    ',
+            \'\ \  \ / -_) |  _|  _ \  ` \   -_)',
+            \' \_/\_/\___|_|\__|\___/_|_|_|\___|',
+            \ '',
+            \]
+
+let g:startify_custom_header =
+            \ 'map(g:ascii + startify#fortune#boxed(), "\"   \".v:val")'
+
 "}}}
 
 "{{{ vimwiki
