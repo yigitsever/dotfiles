@@ -165,3 +165,5 @@ alias f="find . -name"
 alias b="buku --suggest --colors 'onlxm'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /home/yigit/.vim/bundle/gruvbox/gruvbox_256palette.sh
