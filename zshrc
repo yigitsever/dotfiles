@@ -166,3 +166,5 @@ alias b="buku --suggest --colors 'onlxm'"
 alias tp='trash-put'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /home/yigit/.vim/bundle/gruvbox/gruvbox_256palette.sh

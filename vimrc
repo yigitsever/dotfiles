@@ -34,7 +34,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 
 " color theme.
-Plugin 'whatyouhide/vim-gotham'
+Plugin 'morhetz/gruvbox'
 
 "Personal wiki
 Plugin 'vimwiki/vimwiki'
@@ -132,7 +132,6 @@ set tabstop=8
 " Visual aid to deter from typing past column 110
 set colorcolumn=110
 
-
 " Use english for spellchecking, but don't spellcheck by default
 set spell spelllang=en_us
 set nospell
@@ -175,16 +174,32 @@ set cinoptions=l1
 
 "{{{Look and Feel
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" Color Scheme
+" gruvbox_color_column works as expected IF the order is:
+" set termguicolors
+" colorscheme gruvbox
+" ...
+" set background=dark
+" Investigate later
+
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
-" Favorite NEW Color Scheme
-colorscheme gotham
+colorscheme gruvbox
+
+let g:gruvbox_bold=1
+let g:gruvbox_color_column='red'
+let g:gruvbox_underline=1
+let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_contrast_light='hard'
+let g:gruvbox_vert_split='aqua'
 
 set background=dark    " Setting dark mode
-highlight ColorColumn guibg='DarkRed'
+
+"highlight ColorColumn guibg='DarkRed'
 highlight NormalNC guibg='Black'
-highlight NormalNC guifg='Gray'
+"highlight NormalNC guifg='Cyan'
+
 
 " }}}
 

@@ -27,6 +27,8 @@
     ~/.config/compton/compton.conf                : compton.conf
     ~/.config/dunst/dunstrc                       : dunstrc
     ~/.config/rofi/config                         : rofirc
+    ~/.ncmpcpp/bindings                           : ncmpcpp/bindings
+    ~/.ncmpcpp/config                             : ncmpcpp/config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
