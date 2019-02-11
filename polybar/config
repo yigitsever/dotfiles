@@ -27,15 +27,15 @@
     cyan = #076678
 
 [bar/top]
-    monitor =
-    width = 98%
+    monitor = DVI-I-1
+    width = 100%
     height = 20
-    offset-x = 1%
+    offset-x = 0
     offset-y = 0
-    radius = 5
+    radius = 0
     fixed-center = true
-    override-redirect = true
-    wm-restack = i3
+;override-redirect = true
+;wm-restack = i3
 
     background = ${colors.background}
     foreground = ${colors.foreground}
@@ -57,15 +57,23 @@
     modules-center = xwindow
     modules-right = download upload date time xkeyboard
 
+    tray-position = right
+;tray-background = #00FFFFFF
+    tray-backgroud = ${colors.backgroud}
+
 [module/mpd]
     type = internal/mpd
     host = 127.0.0.1
     port = 6600
 
-    format-online = <toggle> <label-song>
+    format-online = <toggle> <label-song> <icon-random>
     label-song = %artist% - %title%
     icon-pause = 
     icon-play = 
+    icon-random = 咽
+
+    toggle-on-foreground = ${colors.foreground}
+    toggle-off-foreground = ${colors.background}
 
     format-offline = <label-offline>
     label-offline = mpd is offline
