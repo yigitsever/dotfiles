@@ -62,7 +62,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     colored-man-pages
     cpanm
-    dircycle
     git
     gitignore
     taskwarrior
