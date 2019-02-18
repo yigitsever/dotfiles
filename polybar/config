@@ -67,8 +67,8 @@
     icon-play = 
     icon-random = 咽
 
-    toggle-on-foreground = ${colors.foreground}
-    toggle-off-foreground = ${colors.background}
+    toggle-on-foreground = ${colors.foreground_modules}
+    toggle-off-foreground = ${colors.background_modules}
 
     format-offline = <label-offline>
     label-offline = mpd is offline
@@ -221,12 +221,13 @@
 
     format-volume-prefix = ♫
     format-volume-prefix-background = ${colors.purple}
+    format-volume-prefix-foreground = ${colors.background_modules}
     format-volume-prefix-font = 4
     format-volume-prefix-padding = 1
 
     label-volume = %percentage%
-    label-volume-background = ${colors.foreground}
-    label-volume-foreground = ${colors.background}
+    label-volume-background = ${colors.background_modules}
+    label-volume-foreground = ${colors.foreground_modules}
     label-volume-padding = 1
 
     label-muted = 
