@@ -67,8 +67,8 @@
     icon-play = 
     icon-random = 咽
 
-    toggle-on-foreground = ${colors.foreground_modules}
-    toggle-off-foreground = ${colors.background_modules}
+    toggle-on-foreground = ${colors.background_modules}
+    toggle-off-foreground = ${colors.foreground_modules}
 
     format-offline = <label-offline>
     label-offline = mpd is offline
