@@ -16,15 +16,16 @@
     foreground = #d3ebe9
     foreground_alt = #99d1ce
     foreground_modules = #282828
+    red = #9d0006
+    green = #427b58
+    yellow = #b56714
+    blue = #458588
+    purple = #8f3f71
+    aqua = #689d6a
+    orange = #d65d0e
     primary = #d26937
     secondary = #888ca6
     alert = #c23127
-    yellow = #b56714
-    purple = #8f3f71
-    apricot = #af3a03
-    green = #427b58
-    red = #9d0006
-    cyan = #076678
 
 [bar/top]
     monitor =
@@ -56,6 +57,7 @@
     modules-right = download upload date time xkeyboard
 
     tray-position = right
+
 [module/mpd]
     type = internal/mpd
     host = 127.0.0.1
@@ -96,7 +98,7 @@
 
     format-prefix = 
     format-prefix-padding = 1
-    format-prefix-background = ${colors.cyan}
+    format-prefix-background = ${colors.blue}
     format-prefix-foreground = ${colors.foreground}
     format-prefix-font = 4
 
@@ -186,7 +188,7 @@
     format = <label>
 
     format-prefix = 
-    format-prefix-background = ${colors.apricot}
+    format-prefix-background = ${colors.orange}
     format-prefix-foreground = ${colors.foreground}
     format-prefix-font = 4
     format-prefix-padding = 1
