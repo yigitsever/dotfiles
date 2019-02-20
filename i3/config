@@ -52,6 +52,7 @@ bindsym $mod+Shift+u exec --no-startup-id ~/bin/bukuadd_c
 # swap caps lock and escape, set keyboard layout
 bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
+# use flameshot with print screen
 bindsym Print exec flameshot gui
 
 # media keys
@@ -194,4 +195,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
+# config
+hide_edge_borders smart
+workspace_auto_back_and_forth yes
 focus_follows_mouse no
