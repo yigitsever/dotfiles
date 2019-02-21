@@ -29,6 +29,7 @@
     ~/.config/rofi/config                         : rofirc
     ~/.ncmpcpp/bindings                           : ncmpcpp/bindings
     ~/.ncmpcpp/config                             : ncmpcpp/config
+    ~/.xsession                                   : xsession
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
