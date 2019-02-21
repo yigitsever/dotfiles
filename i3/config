@@ -6,7 +6,10 @@ set $mod Mod4
 set $alt Mod1
 
 # launch polybar
-exec--no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh &
+
+# start the screensaver, '' at the end is not a typo
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
 
 # Font for window titles
 font pango:Lato 11

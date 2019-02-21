@@ -19,9 +19,6 @@ hsetroot -center ~/Dropbox/Wallpapers/moon.jpg &
 compton -b &
 xsettingsd &
 
-# start the screensaver
-xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' &
-
 # utilities
 dropbox &
 copyq &
