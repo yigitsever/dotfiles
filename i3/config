@@ -42,7 +42,7 @@ floating_modifier $alt
 # bindings
 
 # shoo the mouse
-bindsym $mod+o exec --no-startup-id xdotool mousemove 1920 1080
+bindsym $mod+o exec --no-startup-id xdotool mousemove 1087 1101
 
 # bookmark from selection
 bindsym $mod+u exec --no-startup-id ~/bin/bukuadd
