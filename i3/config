@@ -20,13 +20,11 @@ floating_modifier $alt
 # get the mouse out of the way
 bindsym $mod+o exec --no-startup-id xdotool mousemove 1920 1080
 
-# add the selected url to buku
-bindsym $mod+u exec --no-startup-id ~/bin/bukuadd
 # or add from the clipboard
-bindsym $mod+Shift+u exec --no-startup-id ~/bin/bukuadd_c
+bindsym $mod+u exec --no-startup-id ~/bin/bukuadd_c
 
 # swap caps lock and escape, set keyboard layout
-bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
+bindcode $mod+35 exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
 # use flameshot with print screen
 bindsym Print exec flameshot gui
@@ -44,6 +42,7 @@ bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym --whole-window $mod+button2 kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show combi
@@ -140,19 +139,20 @@ mode "resize" {
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
-        bindsym Caps_Lock mode "default"
+        bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
 
 # session
-mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff" {
+mode " (L)ock (S)ignout (R)eboot (P)oweroff" {
+
     bindsym $mod+l exec betterlockscreen -l dimblur -t "Welcome back"
     bindsym $mod+r exec systemctl reboot
     bindsym $mod+p exec systemctl poweroff
     bindsym $mod+s exit
-    bindsym Escape mode "default"
+    bindcode 66 mode "default"
 }
-bindsym $mod+Shift+e mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff"
+bindsym $mod+Shift+e mode " (L)ock (S)ignout (R)eboot (P)oweroff"
 
 bindsym $mod+r mode "resize"
 
