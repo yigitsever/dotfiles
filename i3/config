@@ -44,6 +44,9 @@ floating_modifier $alt
 # shoo the mouse
 bindsym $mod+o exec --no-startup-id xdotool mousemove 1087 1101
 
+# i switched back to firefox can you tell
+bindsym Ctrl+q exec --no-startup-id true
+
 # bookmark from selection
 bindsym $mod+u exec --no-startup-id ~/bin/bukuadd
 # bookmark from clipboard
