@@ -130,7 +130,7 @@ set softtabstop=4
 set tabstop=8
 
 " Visual aid to deter from typing past column 110
-set colorcolumn=110
+"set colorcolumn=110
 
 " Use english for spellchecking, but don't spellcheck by default
 set spell spelllang=en_us
