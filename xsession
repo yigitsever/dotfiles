@@ -18,6 +18,7 @@ nm-applet &
 hsetroot -center ~/Dropbox/Wallpapers/moon.jpg &
 compton -b &
 xsettingsd &
+redshift-gtk &
 
 # utilities
 dropbox &
