@@ -17,6 +17,9 @@ font pango:Lato 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $alt
 
+# i switched back to firefox can you tell
+bindsym Ctrl+q exec --no-startup-id true
+
 # get the mouse out of the way
 bindsym $mod+o exec --no-startup-id xdotool mousemove 1920 1080
 
