@@ -20,10 +20,10 @@ floating_modifier $alt
 # get the mouse out of the way
 bindsym $mod+o exec --no-startup-id xdotool mousemove 1920 1080
 
-# or add from the clipboard
+# bookmark from clipboard
 bindsym $mod+u exec --no-startup-id ~/bin/bukuadd_c
 
-# swap caps lock and escape, set keyboard layout
+# swap caps lock and escape, set keyboard layout, 35 is ]/ü (layout agnostic)
 bindcode $mod+35 exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -option grp:alt_shift_toggle,caps:swapescape"
 
 # use flameshot with print screen
@@ -36,6 +36,12 @@ bindsym $mod+Down exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 bindsym $mod+q exec mpc toggle
 bindsym $mod+Left exec /home/yigit/bin/mpcPrevSong.sh
 bindsym $mod+Right exec mpc next
+
+# shortcuts for frequent programs
+bindsym $mod+Shift+v exec vivaldi-stable
+bindsym $mod+Shift+z exec zotero
+bindsym $mod+Shift+f exec thunar
+bindsym $mod+Shift+t exec thunderbird
 
 # start a terminal
 bindsym $mod+Return exec kitty
