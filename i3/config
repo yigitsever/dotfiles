@@ -10,7 +10,7 @@ exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b &
 exec --no-startup-id dropbox &
 exec --no-startup-id copyq &
-exec --no-startup-id redshift &
+exec --no-startup-id redshift-gtk &
 exec --no-startup-id nm-applet &
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate left --output DVI-I-1 --primary --mode 1920x1080 --pos 1132x608 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off &
 
