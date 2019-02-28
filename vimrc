@@ -1,91 +1,84 @@
-"{{{Vundle
+"{{{
 
-syntax on
-filetype plugin indent on
-
-set nocompatible
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-"the plug-in manager for Vim
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.local/share/nvim/plugged')
 
 "A code-completion engine for Vim
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 "syntax checking
-Plugin 'vim-syntastic/syntastic'
+Plug 'w0rp/aw0rp/ale'
 "manages tag files
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 "language pack
-Plugin 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 "snippet solution
-Plugin 'SirVer/ultisnips'
-"default snippets
-Plugin 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "autopair plugin
-Plugin 'tmsvg/pear-tree'
+Plug 'tmsvg/pear-tree'
+
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 "tree explorer
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 "displays tags ordered by scope
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 "status/tabline
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " color theme.
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 "Personal wiki
-Plugin 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 "distraction-free writing
-Plugin 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 
 "visual display of indent levels
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 "text alignment
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 "access cheat.sh sheets
-Plugin 'dbeniamine/cheat.sh-vim'
+Plug 'dbeniamine/cheat.sh-vim'
 "color code highlight
-Plugin 'chrisbra/Colorizer'
+Plug 'chrisbra/Colorizer'
 "comment helper
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 "folding ledger files
-Plugin 'ledger/vim-ledger'
+Plug 'ledger/vim-ledger'
 "reporen files at your last edit position
-Plugin 'farmergreg/vim-lastplace'
+Plug 'farmergreg/vim-lastplace'
 "toggle, display and navigate marks
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 "git diff in the sign column
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
-Plugin 'svermeulen/vim-cutlass'
-Plugin 'svermeulen/vim-subversive'
-Plugin 'svermeulen/vim-yoink'
+Plug 'svermeulen/vim-cutlass'
+Plug 'svermeulen/vim-subversive'
+Plug 'svermeulen/vim-yoink'
 
 "enable repeating supported plugin maps with '.'
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 "quoting/parenthesizing made simple
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 "pairs of handy bracket mappings
-Plugin 'tpope/vim-unimpaired'
+Plug 'tpope/vim-unimpaired'
 "git wrapper
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 "increment dates, times & more
-Plugin 'tpope/vim-speeddating'
+Plug 'tpope/vim-speeddating'
 "search, substitute and abbreviate
-Plugin 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'
 "helpers for unix
-Plugin 'tpope/vim-eunuch'
+Plug 'tpope/vim-eunuch'
 "unicode character metadata
-Plugin 'tpope/vim-characterize'
+Plug 'tpope/vim-characterize'
 
 "fancy start screen
-Plugin 'mhinz/vim-startify'
-Plugin 'ryanoasis/vim-devicons' " asks to be placed last, sure
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons' " asks to be placed last, sure
 
-call vundle#end()            " required
+call plug#end()            " required
 
 "}}}
 
@@ -104,9 +97,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "{{{Misc Settings
 
-" If installed using git
-set rtp+=~/.fzf
-
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " necesary  for lots of cool vim things
@@ -117,7 +107,6 @@ set nocompatible
 if !exists("g:syntax_on")
     syntax enable
 endif
-"syntax enable
 
 set grepprg=grep\ -nH\ $* " DONT KNOW WHAT THIS DOES
 
@@ -310,7 +299,6 @@ let g:tagbar_width = 25
 let g:airline_powerline_fonts = 1 " fira code
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 
 "}}}
@@ -321,29 +309,10 @@ let g:NERDTreeWinSize=25
 
 "}}}
 
-"{{{ Syntastic
+"{{{ Ale
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 4
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-
-let g:syntastic_mode_map = {
-            \ 'mode': 'passive',
-            \ 'active_filetypes': [],
-            \ 'passive_filetypes': []
-            \}
-
-
-nnoremap <F8> :SyntasticCheck<CR>
-nnoremap <Leader>r :SyntasticReset<CR>
-nnoremap <Leader>i :SyntasticInfo<CR>
-noremap <Leader>m :SyntasticToggleMode<CR>
-
-let g:syntastic_perl_checkers = ['perl', 'podchecker']
-let g:syntastic_java_checkers = []
-let g:syntastic_enable_perl_checker = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚑'
 
 "}}}
 
