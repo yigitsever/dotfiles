@@ -5,7 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "A code-completion engine for Vim
 Plug 'Valloric/YouCompleteMe'
 "syntax checking
-Plug 'w0rp/aw0rp/ale'
+Plug 'w0rp/ale'
 "manages tag files
 Plug 'ludovicchabant/vim-gutentags'
 "language pack
@@ -199,7 +199,7 @@ highlight NormalNC guibg='Black'
 function! Browser ()
     let line = getline (".")
     let line = matchstr (line, "http[^   ]*")
-    exec "!vivaldi-stable ".line
+    exec "!firefox ".line
 endfunction
 
 "}}}

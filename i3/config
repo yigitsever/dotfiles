@@ -41,7 +41,6 @@ bindsym $mod+Left exec /home/yigit/bin/mpcPrevSong.sh
 bindsym $mod+Right exec mpc next
 
 # shortcuts for frequent programs
-bindsym $mod+Shift+v exec vivaldi-stable
 bindsym $mod+Shift+z exec zotero
 bindsym $mod+Shift+f exec thunar
 bindsym $mod+Shift+t exec thunderbird

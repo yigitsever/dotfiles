@@ -28,7 +28,7 @@ icon_path = "/usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papiru
 sticky_history = yes
 dmenu = "/usr/bin/rofi"
 history_length = 20
-browser = /usr/bin/vivaldi-stable
+browser = /usr/bin/firefox
 title = Dunst
 class = Dunst
 
