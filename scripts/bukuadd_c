@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#set -e
+url=$(xsel -b)
+tags=$(zenity --entry --text="enter tags for $url")
+
+if [[ $? -ne 0 ]]; then
+    exit 0
+fi
+
+FOO=$(buku --np --nc -p -1)
+OUT="$(buku --np --nc -a "$url" "$tags" 2>&1)"
+#echo "OUT>$OUT"
+if [[ $OUT =~ "ERROR" ]] ; then
+    notify-send "Bookmarking Failed" "$OUT" --app-name="buku" --icon="dialog-error"
+    exit 1
+fi
+
+BAR=$FOO
+
+while [[ $BAR == "$FOO" ]]; do
+    sleep 1
+    BAR=$(buku --np --nc -p -1)
+    #echo "BAR>$BAR"
+done;
+
+notify-send "Success" "$BAR" --app-name="buku" --icon="checkmark"
+
+exit 0
