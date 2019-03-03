@@ -54,9 +54,14 @@
 
     modules-left = i3 pulseaudio mpd
     modules-center = xwindow
-    modules-right = download upload date time xkeyboard
+    modules-right = focus download upload date time xkeyboard
 
     tray-position = right
+
+[module/focus]
+type = custom/script
+exec = focus
+interval = 10
 
 [module/mpd]
     type = internal/mpd
