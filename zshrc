@@ -166,4 +166,4 @@ alias tp='trash-put'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /home/yigit/.vim/bundle/gruvbox/gruvbox_256palette.sh
+source /home/yigit/.local/share/nvim/plugged/gruvbox/gruvbox_256palette.sh
