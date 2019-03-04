@@ -25,7 +25,7 @@ exec --no-startup-id conky --daemonize -c ~/.config/conky/conky.conf
 exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
 
 # set the wallpaper last (hopefully after xrandr)
-exec --no-startup-id hsetroot -fill ~/mosaic_2.png
+exec --no-startup-id hsetroot -fill ~/Dropbox/Wallpapers/yousef-espanioly-541259-unsplash.jpg
 
 # lock screen
 exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
