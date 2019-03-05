@@ -1,6 +1,7 @@
 [user]
     name = Yigit Sever
     email = yigit.sever@tedu.edu.tr
+    signingkey = 043FE5D3E75368AA
 [core]
     autocrlf = input
     safecrlf = true
