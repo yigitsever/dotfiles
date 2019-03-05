@@ -30,6 +30,9 @@
     ~/.ncmpcpp/bindings                           : ncmpcpp/bindings
     ~/.ncmpcpp/config                             : ncmpcpp/config
     ~/.xsession                                   : xsession
+    ~/bin/bukuadd_c                               : scripts/bukuadd_c
+    ~/bin/focus                                   : scripts/focus
+    ~/.config/zathura/zathurarc                   : zathurarc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
