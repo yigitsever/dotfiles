@@ -9,7 +9,7 @@ Plug 'w0rp/ale'
 "manages tag files
 Plug 'ludovicchabant/vim-gutentags'
 "language pack
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 
 "snippet solution
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -33,6 +33,8 @@ Plug 'morhetz/gruvbox'
 Plug 'vimwiki/vimwiki'
 "distraction-free writing
 Plug 'junegunn/goyo.vim'
+" latex
+Plug 'lervag/vimtex'
 
 "visual display of indent levels
 Plug 'nathanaelkane/vim-indent-guides'
@@ -434,3 +436,8 @@ xnoremap x d
 nnoremap xx dd
 nnoremap X D
 "}}}
+
+" {{{ vimtex
+let g:vimtex_view_method = 'zathura'
+
+" }}}
