@@ -1,0 +1,42 @@
+#!/usr/bin/env perl
+# shows active taskwarrior task on polybar
+#Copyright © 2019 yourname
+
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+use strict;
+use warnings;
+use IO::CaptureOutput qw/capture_exec/;
+
+my ($stdout, $stderr, $success, $exit_code) = capture_exec("task active");
+
+#print("out: $stdout\nerr: $stderr\nexit_code: $exit_code\n");
+
+if ($stderr =~ /No matches\./) {
+    system 'echo "What a beautiful day"';
+    exit;
+}
+my $active_task_maybe = $stdout;
+
+$active_task_maybe =~ s/^\s+|\s+$//g;
+
+my @lines = split /\n/, $active_task_maybe;
+
+my $task = $lines[2];
+$task =~ s/^\s+|\s+$//g;
+$task =~ s/\s+/ /g;
+
+if ($task =~ m/.*?next (.*)$/) {
+    print "$1";
+}

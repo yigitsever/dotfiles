@@ -10,247 +10,247 @@
 ;==========================================================
 
 [colors]
-    background = #0c1014
-    background_alt = #0a3749
-    background_modules = #fbf1c7
-    foreground = #d3ebe9
-    foreground_alt = #99d1ce
-    foreground_modules = #282828
-    red = #9d0006
-    green = #427b58
-    yellow = #b56714
-    blue = #458588
-    purple = #8f3f71
-    aqua = #689d6a
-    orange = #d65d0e
-    primary = #d26937
-    secondary = #888ca6
-    alert = #c23127
+background = #0c1014
+background_alt = #0a3749
+background_modules = #fbf1c7
+foreground = #d3ebe9
+foreground_alt = #99d1ce
+foreground_modules = #282828
+red = #9d0006
+green = #427b58
+yellow = #b56714
+blue = #458588
+purple = #8f3f71
+aqua = #689d6a
+orange = #d65d0e
+primary = #d26937
+secondary = #888ca6
+alert = #c23127
 
 [bar/top]
-    monitor =
-    width = 100%
-    height = 20
-    offset-x = 0
-    offset-y = 0
-    radius = 0
-    fixed-center = true
+monitor =
+width = 100%
+height = 20
+offset-x = 0
+offset-y = 0
+radius = 0
+fixed-center = true
 
-    background = ${colors.background}
-    foreground = ${colors.foreground}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-    border-top-size = 0
-    border-bottom-size = 0
-    border-top-color = ${colors.background}
-    border-bottom-color = ${colors.background}
+border-top-size = 0
+border-bottom-size = 0
+border-top-color = ${colors.background}
+border-bottom-color = ${colors.background}
 
-    padding = 2
-    module-margin = 1
+padding = 2
+module-margin = 1
 
-    font-0 = scientifica:antialias=false;0
-    font-1 = Lato:size=10;1
-    font-2 = Raleway:size=10;1
-    font-3 = FuraCode Nerd Font Mono:size=12;2
+font-0 = scientifica:antialias=false;0
+font-1 = Lato:size=10;1
+font-2 = Raleway:size=10;1
+font-3 = FuraCode Nerd Font Mono:size=12;2
 
-    modules-left = i3 pulseaudio mpd
-    modules-center = xwindow
-    modules-right = focus download upload date time xkeyboard
+modules-left = i3 pulseaudio mpd
+modules-center = xwindow
+modules-right = focus download upload date time xkeyboard
 
-    tray-position = right
+tray-position = right
 
 [module/focus]
 type = custom/script
-exec = focus
+exec = ~/.config/polybar/focus
 interval = 10
 
 [module/mpd]
-    type = internal/mpd
-    host = 127.0.0.1
-    port = 6600
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
 
-    format-online = <toggle> <label-song> <icon-random>
-    label-song = %artist% - %title%
-    icon-pause = 
-    icon-play = 
-    icon-random = 咽
+format-online = <toggle> <label-song> <icon-random>
+label-song = %artist% - %title%
+icon-pause = 
+icon-play = 
+icon-random = 咽
 
-    toggle-on-foreground = ${colors.background_modules}
-    toggle-off-foreground = ${colors.foreground_modules}
+toggle-on-foreground = ${colors.background_modules}
+toggle-off-foreground = ${colors.foreground_modules}
 
-    format-offline = <label-offline>
-    label-offline = mpd is offline
+format-offline = <label-offline>
+label-offline = mpd is offline
 
 [module/xwindow]
-    type = internal/xwindow
-    format = <label>
-    label = %title:0:70:...%
+type = internal/xwindow
+format = <label>
+label = %title:0:70:...%
 
-    y-offset = 10
-    label-padding = 1
-    label-font = 1
+y-offset = 10
+label-padding = 1
+label-font = 1
 
-    label-empty = ﳓ
-    label-empty-font = 4
-    label-empty-padding = 5
+label-empty = ﳓ
+label-empty-font = 4
+label-empty-padding = 5
 
 [module/xkeyboard]
-    type = internal/xkeyboard
-    blacklist-0 = num lock
-    blacklist-1 = scroll lock
+type = internal/xkeyboard
+blacklist-0 = num lock
+blacklist-1 = scroll lock
 
-    format = <label-layout> <label-indicator>
-    format-spacing = 0
+format = <label-layout> <label-indicator>
+format-spacing = 0
 
-    format-prefix = 
-    format-prefix-padding = 1
-    format-prefix-background = ${colors.blue}
-    format-prefix-foreground = ${colors.foreground}
-    format-prefix-font = 4
+format-prefix = 
+format-prefix-padding = 1
+format-prefix-background = ${colors.blue}
+format-prefix-foreground = ${colors.foreground}
+format-prefix-font = 4
 
-    label-layout = %layout%
-    label-layout-padding = 1
-    label-layout-background = ${colors.background_modules}
-    label-layout-foreground = ${colors.foreground_modules}
+label-layout = %layout%
+label-layout-padding = 1
+label-layout-background = ${colors.background_modules}
+label-layout-foreground = ${colors.foreground_modules}
 
-    label-indicator-padding = 2
-    label-indicator-margin =
-    label-indicator-background = ${colors.alert}
+label-indicator-padding = 2
+label-indicator-margin =
+label-indicator-background = ${colors.alert}
 
 [module/i3]
-    type = internal/i3
-    format = <label-state> <label-mode>
-    index-sort = true
-    wrapping-scroll = false
-    strip-wsnumbers = true
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
 
-    label-mode-background = ${colors.background_modules}
-    label-mode-foreground = ${colors.foreground_modules}
-    label-mode-padding = 2
+label-mode-background = ${colors.background_modules}
+label-mode-foreground = ${colors.foreground_modules}
+label-mode-padding = 2
 
-    label-focused = %name%
-    label-focused-background = ${colors.red}
-    label-focused-foreground = ${colors.background_modules}
-    label-focused-padding = 1
+label-focused = %name%
+label-focused-background = ${colors.red}
+label-focused-foreground = ${colors.background_modules}
+label-focused-padding = 1
 
-    label-unfocused = %name%
-    label-unfocused-background = ${colors.background_modules}
-    label-unfocused-foreground = ${colors.foreground_modules}
-    label-unfocused-padding = 1
+label-unfocused = %name%
+label-unfocused-background = ${colors.background_modules}
+label-unfocused-foreground = ${colors.foreground_modules}
+label-unfocused-padding = 1
 
-    label-visible = %name%
-    label-visible-background = ${colors.background_modules}
-    label-visible-foreground = ${colors.foreground_modules}
-    label-visible-padding = 1
+label-visible = %name%
+label-visible-background = ${colors.background_modules}
+label-visible-foreground = ${colors.foreground_modules}
+label-visible-padding = 1
 
-    label-urgent = %index%
-    label-urgent-background = ${colors.alert}
-    label-urgent-foreground = ${colors.background}
-    label-urgent-padding = 1
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.background}
+label-urgent-padding = 1
 
 [module/download]
-    type = internal/network
-    interface = enp1s0
-    interval = 3.0
+type = internal/network
+interface = enp1s0
+interval = 3.0
 
-    format-connected = <label-connected>
+format-connected = <label-connected>
 
-    format-connected-prefix = 
-    format-connected-prefix-padding = 1
-    format-connected-prefix-background = ${colors.green}
-    format-connected-prefix-foreground = ${colors.foreground}
+format-connected-prefix = 
+format-connected-prefix-padding = 1
+format-connected-prefix-background = ${colors.green}
+format-connected-prefix-foreground = ${colors.foreground}
 
-    label-connected =  %downspeed%
-    label-connected-background = ${colors.background_modules}
-    label-connected-foreground = ${colors.foreground_modules}
-    label-connected-padding = 1
+label-connected =  %downspeed%
+label-connected-background = ${colors.background_modules}
+label-connected-foreground = ${colors.foreground_modules}
+label-connected-padding = 1
 
-    format-disconnected = <label-disconnected>
-    label-disconnected = %ifname% disconnected 
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected 
 
 [module/upload]
-    type = internal/network
-    interface = enp1s0
-    interval = 3.0
+type = internal/network
+interface = enp1s0
+interval = 3.0
 
-    format-connected = <label-connected>
+format-connected = <label-connected>
 
-    format-connected-prefix = 
-    format-connected-prefix-padding = 1
-    format-connected-prefix-background = ${colors.yellow}
-    format-connected-prefix-foreground = ${colors.foreground}
+format-connected-prefix = 
+format-connected-prefix-padding = 1
+format-connected-prefix-background = ${colors.yellow}
+format-connected-prefix-foreground = ${colors.foreground}
 
-    label-connected = %upspeed%
-    label-connected-background = ${colors.background_modules}
-    label-connected-foreground = ${colors.foreground_modules}
-    label-connected-padding = 1
+label-connected = %upspeed%
+label-connected-background = ${colors.background_modules}
+label-connected-foreground = ${colors.foreground_modules}
+label-connected-padding = 1
 
 [module/date]
-    type = internal/date
-    interval = 1
+type = internal/date
+interval = 1
 
-    date = %Y-%m-%d %A
-    label = %date%
-    format = <label>
+date = %Y-%m-%d %A
+label = %date%
+format = <label>
 
-    format-prefix = 
-    format-prefix-background = ${colors.orange}
-    format-prefix-foreground = ${colors.foreground}
-    format-prefix-font = 4
-    format-prefix-padding = 1
+format-prefix = 
+format-prefix-background = ${colors.orange}
+format-prefix-foreground = ${colors.foreground}
+format-prefix-font = 4
+format-prefix-padding = 1
 
-    label-background = ${colors.background_modules}
-    label-foreground = ${colors.foreground_modules}
-    label-padding = 1
+label-background = ${colors.background_modules}
+label-foreground = ${colors.foreground_modules}
+label-padding = 1
 
 [module/time]
-    type = internal/date
-    interval = 1
+type = internal/date
+interval = 1
 
-    time = %H:%M
-    label = %time%
-    format = <label>
+time = %H:%M
+label = %time%
+format = <label>
 
-    format-prefix = 
-    format-prefix-background = ${colors.secondary}
-    format-prefix-foreground = ${colors.foreground}
-    format-prefix-font = 4
-    format-prefix-padding = 1
+format-prefix = 
+format-prefix-background = ${colors.secondary}
+format-prefix-foreground = ${colors.foreground}
+format-prefix-font = 4
+format-prefix-padding = 1
 
-    label-background = ${colors.background_modules}
-    label-foreground = ${colors.foreground_modules}
-    label-padding = 1
+label-background = ${colors.background_modules}
+label-foreground = ${colors.foreground_modules}
+label-padding = 1
 
 [module/pulseaudio]
-    type = internal/pulseaudio
-    interval = 5
+type = internal/pulseaudio
+interval = 5
 
-    format-volume = <label-volume>
+format-volume = <label-volume>
 
-    format-volume-prefix = ♫
-    format-volume-prefix-background = ${colors.purple}
-    format-volume-prefix-foreground = ${colors.background_modules}
-    format-volume-prefix-font = 4
-    format-volume-prefix-padding = 1
+format-volume-prefix = ♫
+format-volume-prefix-background = ${colors.purple}
+format-volume-prefix-foreground = ${colors.background_modules}
+format-volume-prefix-font = 4
+format-volume-prefix-padding = 1
 
-    label-volume = %percentage%
-    label-volume-background = ${colors.background_modules}
-    label-volume-foreground = ${colors.foreground_modules}
-    label-volume-padding = 1
+label-volume = %percentage%
+label-volume-background = ${colors.background_modules}
+label-volume-foreground = ${colors.foreground_modules}
+label-volume-padding = 1
 
-    label-muted = 
-    label-muted-background = ${colors.purple}
-    label-muted-foreground = ${colors.foreground}
-    label-muted-padding = 2
+label-muted = 
+label-muted-background = ${colors.purple}
+label-muted-foreground = ${colors.foreground}
+label-muted-padding = 2
 
 [settings]
-    screenchange-reload = true
-    compositing-background = source
-    compositing-foreground = source
-    compositing-border = over
-    pseudo-transparency = false
+screenchange-reload = true
+compositing-background = source
+compositing-foreground = source
+compositing-border = over
+pseudo-transparency = false
 
 [global/wm]
-    margin-top = 5
-    margin-bottom = 5
+margin-top = 5
+margin-bottom = 5
 
 ; vim:ft=dosini
