@@ -62,7 +62,7 @@
 
 [module/focus]
 type = custom/script
-exec = focus
+exec = ~/.config/polybar/focus
 interval = 10
 
 [module/mpd]
