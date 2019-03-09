@@ -28,7 +28,7 @@ exec --no-startup-id conky --daemonize -c ~/.config/conky/task.conf
 exec --no-startup-id hsetroot -fill ~/Dropbox/Wallpapers/yousef-espanioly-541259-unsplash.jpg
 
 # lock screen
-exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'betterlockscreen -l dimblur -t "Welcome Back"' ''
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 300 'i3lock-fancy -f Lato-Light -t "welcome back" -- scrot -z' ''
 
 gaps inner 0
 gaps outer 0
@@ -172,7 +172,7 @@ mode "resize" {
 
 # session
 mode "(L)ock, (S)ignout, (R)eboot, (P)oweroff" {
-    bindsym $mod+l exec betterlockscreen -l dimblur -t "Welcome back"
+    bindsym $mod+l exec i3lock-fancy -f Lato-Light -t 'welcome back' -- scrot -z
     bindsym $mod+r exec systemctl reboot
     bindsym $mod+p exec systemctl poweroff
     bindsym $mod+s exit
