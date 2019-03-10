@@ -201,7 +201,7 @@ highlight NormalNC guibg='Black'
 function! Browser ()
     let line = getline (".")
     let line = matchstr (line, "http[^   ]*")
-    exec "!vivaldi-stable ".line
+    exec "!firefox ".line
 endfunction
 
 "}}}
