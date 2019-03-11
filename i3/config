@@ -33,12 +33,12 @@ bindcode $mod+35 exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -opt
 bindsym Print exec flameshot gui
 
 # media keys
-bindsym $mod+m exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym $mod+Up exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym $mod+Down exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-bindsym $mod+q exec mpc toggle
-bindsym $mod+Left exec /home/yigit/bin/mpcPrevSong.sh
-bindsym $mod+Right exec mpc next
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPrev exec /home/yigit/bin/mpcPrevSong.sh
+bindsym XF86AudioNext exec mpc next
 
 # shortcuts for frequent programs
 bindsym $mod+Shift+z exec zotero
