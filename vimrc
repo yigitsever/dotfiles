@@ -149,6 +149,10 @@ set linebreak " wrap using 'breakat' character
 set splitbelow " new split panes will split to below and right
 set splitright
 
+" persistent undo
+set undodir=~/.vim/undodir
+set undofile
+
 " lower case searches ignore case, upper case searches do not
 set ignorecase
 set smartcase
