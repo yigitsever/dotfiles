@@ -57,13 +57,13 @@ bindsym $mod+p exec --no-startup-id "setxkbmap -model pc105 -layout us,tr -optio
 bindsym Print exec flameshot gui
 
 # media keys
-bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioStop exec mpc stop
-bindsym XF86AudioPrev exec /home/yigit/bin/mpvPrev
-bindsym XF86AudioNext exec mpc next
+bindsym $mod+m exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym $mod+Up exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym $mod+Down exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym $mod+q exec mpc toggle
+#bindsym XF86AudioStop exec mpc stop
+bindsym $mod+Left exec /home/yigit/bin/mpvPrev
+bindsym $mod+Right exec mpc next
 
 # start a terminal
 bindsym $mod+Return exec kitty
