@@ -15,7 +15,7 @@ xset -b &
 nm-applet &
 
 # set the wallpaper and other visuals
-hsetroot -center ~/Dropbox/Wallpapers/escalator.jpg &
+~/.fehbg &
 compton -b &
 xsettingsd &
 redshift-gtk &
